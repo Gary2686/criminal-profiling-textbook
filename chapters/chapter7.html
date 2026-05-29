@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 7：嫌疑人式側寫 — Criminal & Behavioral Profiling 互動教材</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="lang-zh">
+
+<header class="site-header"><div class="container">
+  <a href="../index.html" class="site-title"><span>🔍</span>
+    <span class="lang-zh-only">犯罪與行為側寫 · 互動教材</span>
+    <span class="lang-en-only">Criminal & Behavioral Profiling · Interactive</span></a>
+  <div class="lang-toggle"><button data-lang="zh" class="active">中文</button><button data-lang="en">English</button></div>
+</div></header>
+
+<section class="chapter-hero"><div class="container">
+  <div class="lang-zh-only">
+    <p style="opacity:.85;letter-spacing:.3em;margin-bottom:.5rem">CHAPTER 7</p>
+    <h1>嫌疑人式側寫</h1>
+    <p class="subtitle">從「war on drugs」的 drug courier profile 到「war on terrorism」的 BDO 與 SPOT — 當「以群體特徵辨識可能嫌犯」這套邏輯遇上憲法、民權與實證科學，會發生什麼事？</p>
+  </div>
+  <div class="lang-en-only">
+    <p style="opacity:.85;letter-spacing:.3em;margin-bottom:.5rem">CHAPTER 7</p>
+    <h1>Suspect-Based Profiling</h1>
+    <p class="subtitle">From the drug-war's drug courier profile to the terror-war's BDOs and SPOT — what happens when "identifying suspects from group traits" collides with the Constitution, civil rights, and empirical science?</p>
+  </div>
+</div></section>
+
+<div class="chapter-layout">
+  <aside><nav class="chapter-toc">
+    <div class="lang-zh-only"><h4>本章目錄</h4></div><div class="lang-en-only"><h4>Contents</h4></div>
+    <ol>
+      <li><a href="#what"><span class="lang-zh-only">什麼是嫌疑人式側寫</span><span class="lang-en-only">What Is It</span></a></li>
+      <li><a href="#racial"><span class="lang-zh-only">種族側寫</span><span class="lang-en-only">Racial Profiling</span></a></li>
+      <li><a href="#drug-war"><span class="lang-zh-only">藥物戰與 drug courier</span><span class="lang-en-only">Drug War &amp; Drug Courier</span></a></li>
+      <li><a href="#terrorism"><span class="lang-zh-only">恐怖分子側寫</span><span class="lang-en-only">Profiling Terrorists</span></a></li>
+      <li><a href="#lone-wolf"><span class="lang-zh-only">Lone Wolf 個案</span><span class="lang-en-only">Lone Wolves</span></a></li>
+      <li><a href="#passenger"><span class="lang-zh-only">機場乘客篩查</span><span class="lang-en-only">Passenger Screening</span></a></li>
+      <li><a href="#spot-fast"><span class="lang-zh-only">SPOT 與 FAST</span><span class="lang-en-only">SPOT &amp; FAST</span></a></li>
+      <li><a href="#deception"><span class="lang-zh-only">測謊：科學與迷思</span><span class="lang-en-only">Deception: Science &amp; Myth</span></a></li>
+      <li><a href="#glossary"><span class="lang-zh-only">關鍵詞彙</span><span class="lang-en-only">Glossary</span></a></li>
+      <li><a href="#summary"><span class="lang-zh-only">總結</span><span class="lang-en-only">Summary</span></a></li>
+      <li><a href="#quiz"><span class="lang-zh-only">自我評量</span><span class="lang-en-only">Quiz</span></a></li>
+    </ol>
+  </nav></aside>
+
+  <main>
+
+    <section id="what" class="section-card">
+      <div class="lang-zh-only">
+        <h2>1 · 什麼是「嫌疑人式側寫」？</h2>
+        <p>「Suspect-based profiling」（又稱 prospective profiling）：從<strong>歷史犯罪者資料</strong>中找出「群體特徵 + 犯罪類型」的統計關聯，<strong>據以辨識可能嫌犯</strong>。它的設計初衷與其他側寫不同：</p>
+
+        <table class="compare-table">
+          <thead><tr><th>項目</th><th>Crime Scene Profiling</th><th>Suspect-Based Profiling</th></tr></thead>
+          <tbody>
+            <tr><td>對象</td><td>已知犯罪 → 推測未知兇手</td><td>未發生犯罪 → 從特定群體找出可能犯罪者</td></tr>
+            <tr><td>主要素材</td><td>現場、屍體、證物</td><td>族裔、職業、行為模式、購票紀錄、跨境紀錄</td></tr>
+            <tr><td>常見應用</td><td>連續殺人、強姦、縱火</td><td>毒品走私、恐怖主義、機場篩查</td></tr>
+            <tr><td>核心爭議</td><td>準確度、認知偏誤</td><td>憲法權利、種族歧視、誤判率</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <strong>📝 Harcourt (2003)：</strong>「發展群體特徵與特定犯罪間的相關性，協助警方辨識調查對象。」 — 概念上看似中性，但實務上常用「<strong>race / ethnicity / national origin</strong>」作為群體特徵，於是踩入 racial profiling。
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>1 · What Is Suspect-Based Profiling?</h2>
+        <p>"Suspect-based profiling" (a.k.a. prospective profiling): uses <strong>historical offender data</strong> to find statistical links between group traits and crime types, then <strong>flags possible suspects</strong>. Its design differs from other profiling:</p>
+
+        <table class="compare-table">
+          <thead><tr><th></th><th>Crime Scene Profiling</th><th>Suspect-Based Profiling</th></tr></thead>
+          <tbody>
+            <tr><td>Subject</td><td>Known crime → infer unknown offender</td><td>No crime yet → find possible offenders in a group</td></tr>
+            <tr><td>Inputs</td><td>Scene, body, evidence</td><td>Race, occupation, behavior, ticket records, border records</td></tr>
+            <tr><td>Typical use</td><td>Serial murder, rape, arson</td><td>Drug trafficking, terrorism, airport screening</td></tr>
+            <tr><td>Core controversy</td><td>Accuracy, cognitive bias</td><td>Constitutional rights, racial bias, false positives</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <strong>📝 Harcourt (2003):</strong> "Develop correlations between specific criminal activity and certain group-based traits to help police identify potential suspects." Neutral in theory, but in practice the "group traits" often become <strong>race/ethnicity/national origin</strong> — racial profiling territory.
+        </div>
+      </div>
+    </section>
+
+    <section id="racial" class="section-card">
+      <div class="lang-zh-only">
+        <h2>2 · 種族側寫 — 從 DWB 到 9/11 後</h2>
+        <div class="concept-card">
+          <div class="concept-term">Racial Profiling（Ramirez 等, 2000）</div>
+          <p style="margin-bottom:0">「警方主動行動<strong>依賴 race / ethnicity / national origin</strong>，而非<strong>行為或具體調查線索</strong>。」</p>
+        </div>
+        <ul>
+          <li>20 世紀末「DWB（driving while black/brown）」一詞流行，模仿 DWI；9/11 後出現「flying while Brown」「walking while Muslim」。</li>
+          <li>美國至少 12 州通過反種族側寫法、要求反偏誤訓練、紀錄每位被攔下駕駛人的人口統計。</li>
+          <li>國際數據：英國黑人被攔搜機率是白人 7.5 倍；加拿大黑人被攔停機率是其他族裔近 4 倍。</li>
+        </ul>
+
+        <div class="focus-box">
+          <span class="focus-label">CASE</span>
+          <h4>Wilkins v. Maryland State Police</h4>
+          <p>Lamberth 對 I-95 高速公路調查：</p>
+          <ul>
+            <li>被攔下的 5,354 名超速駕駛人中，白人 74.7% / 黑人 17.5%（看似差距不大）</li>
+            <li>被「搜車」者中：<strong>黑人 72.9%、黑/西/其他少數族裔合計 80.3%</strong></li>
+            <li>白人被攔下後僅 20% 被搜車</li>
+          </ul>
+          <p style="margin-bottom:0">Lamberth：「無爭議地展示了對黑人及其他少數族裔的種族歧視性影響。」</p>
+        </div>
+
+        <h3>關鍵判決</h3>
+        <table class="compare-table">
+          <thead><tr><th>判例</th><th>核心</th></tr></thead>
+          <tbody>
+            <tr><td><strong>United States v. Sokolow (1989)</strong></td><td>最高法院允許使用 drug courier profile 於偵查（如交通攔停、短暫拘留機場乘客）。</td></tr>
+            <tr><td><strong>Whren v. United States (1996)</strong></td><td>允許 <strong>pretext stops</strong> — 警方可基於輕微交通違規攔車作為搜索藉口。</td></tr>
+            <tr><td><strong>U.S. v. Arizona (2012)</strong></td><td>維持「攔查時可問移民身份」一項；廢除三項較嚴格條款；批評者警告其仍可能催生 racial profiling。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>2 · Racial Profiling — From DWB to Post-9/11</h2>
+        <div class="concept-card">
+          <div class="concept-term">Racial Profiling (Ramirez et al., 2000)</div>
+          <p style="margin-bottom:0">"Police-initiated action that relies on <strong>race, ethnicity, or national origin</strong> rather than <strong>behavior or specific investigative leads</strong>."</p>
+        </div>
+        <ul>
+          <li>"DWB (driving while black/brown)" — late-20C slang mimicking DWI; post-9/11 "flying while Brown," "walking while Muslim."</li>
+          <li>At least 12 U.S. states passed anti-profiling laws requiring bias training and statistics on every stop.</li>
+          <li>International data: UK Black motorists are stopped/searched 7.5× more than whites; Canadian Black drivers stopped ~4× more.</li>
+        </ul>
+
+        <div class="focus-box">
+          <span class="focus-label">CASE</span>
+          <h4>Wilkins v. Maryland State Police</h4>
+          <p>Lamberth's I-95 study:</p>
+          <ul>
+            <li>Of 5,354 stopped speeders: 74.7% white, 17.5% Black (apparently small gap)</li>
+            <li>Of those searched: <strong>72.9% Black; 80.3% Black/Hispanic/other minority</strong></li>
+            <li>Only 20% of stopped whites were searched</li>
+          </ul>
+          <p style="margin-bottom:0">Lamberth: "shows without question a racially discriminatory impact on Black and other minority motorists."</p>
+        </div>
+
+        <h3>Key Rulings</h3>
+        <table class="compare-table">
+          <thead><tr><th>Case</th><th>Core</th></tr></thead>
+          <tbody>
+            <tr><td><strong>United States v. Sokolow (1989)</strong></td><td>Allowed use of the drug courier profile (traffic stops, airport brief detentions).</td></tr>
+            <tr><td><strong>Whren v. United States (1996)</strong></td><td>Allowed <strong>pretext stops</strong> — minor traffic infractions as a pretext for searching.</td></tr>
+            <tr><td><strong>U.S. v. Arizona (2012)</strong></td><td>Upheld "ask immigration status during stops"; struck down three harsher provisions; critics warn of profiling.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="drug-war" class="section-card">
+      <div class="lang-zh-only">
+        <h2>3 · 藥物戰與 Drug Courier Profile</h2>
+        <p>1985 年佛州交通安全暨機動車輛部公布「如何辨識毒品走私者」指引，鼓勵警方留意：</p>
+        <ul>
+          <li>租車、嚴格遵守交通法規的駕駛人</li>
+          <li>戴大量金飾者</li>
+          <li>「身份與車輛不相稱」者</li>
+          <li>「與毒品交易相關的族裔群體」</li>
+        </ul>
+        <p>1986 年 DEA 引入「種族傾向」的 drug courier profile，用於 <strong>Operation Pipeline</strong> 訓練全國警察以 pretext stops 偵查藏毒車輛。</p>
+
+        <div class="callout callout-warn">
+          <strong>⚠️ 矛盾與荒謬：</strong>各機構的 drug courier 側寫互相矛盾 — 駕駛舊車 / 新車、超速 / 嚴格守法、戴金飾 / 樸素打扮、買單程票 / 來回票。<strong>但有一點共通：對少數族裔的注意明顯較多。</strong>
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>3 · The Drug War &amp; the Drug Courier Profile</h2>
+        <p>In 1985, Florida's DHSMV issued "drug courier" guidance — urging officers to suspect:</p>
+        <ul>
+          <li>Rental cars or drivers scrupulously obeying laws</li>
+          <li>Drivers wearing lots of gold</li>
+          <li>Drivers whose status "doesn't fit" their vehicle</li>
+          <li>"Ethnic groups associated with the drug trade"</li>
+        </ul>
+        <p>In 1986 the DEA distributed a racially-tinged courier profile for <strong>Operation Pipeline</strong>, training officers nationwide to use pretext stops for drug searches.</p>
+
+        <div class="callout callout-warn">
+          <strong>⚠️ Contradictions:</strong> Drug courier profiles often contradict each other — old car / new car, speeding / law-abiding, gold jewelry / plain dress, one-way / round-trip tickets. <strong>But they consistently flag minorities.</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="terrorism" class="section-card">
+      <div class="lang-zh-only">
+        <h2>4 · 恐怖分子側寫 — 為什麼難？</h2>
+
+        <h3>4.1 迷思 vs 現實</h3>
+        <div class="profile-compare">
+          <div class="profile-col predicted"><h5>❌ 大眾迷思</h5>
+            <ul>
+              <li>恐怖分子多為精神病患</li>
+              <li>多為中東男性</li>
+              <li>易由外貌辨識</li>
+              <li>多為單一動機</li>
+            </ul>
+          </div>
+          <div class="profile-col actual"><h5>✓ 研究現實</h5>
+            <ul>
+              <li>有組織團體「不」多精神疾患（Silke 2008） — 反而需穩定才能執行任務</li>
+              <li>動機多元（rationally / psychologically / culturally）</li>
+              <li>領導者多受過教育、可進行複雜（但偏激）的政治分析</li>
+              <li>MI5：「並無單一人口統計側寫」</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>4.2 U.S. Army &amp; RAND 三類分類</h3>
+        <div class="area-grid">
+          <article class="area-card area-1"><div class="area-icon">R</div>
+            <div class="lang-zh-only"><h4>Rationally Motivated</h4><p>明確的政治／社會／經濟目標；通常避免人員傷亡，攻擊基礎設施與建物。</p></div>
+          </article>
+          <article class="area-card area-2"><div class="area-icon">P</div>
+            <div class="lang-zh-only"><h4>Psychologically Motivated</h4><p>個人失敗感 + 報復動機；通常不願談判，鎖定對人身傷害。<strong>多數 lone wolf 屬此類。</strong></p></div>
+          </article>
+          <article class="area-card area-3"><div class="area-icon">C</div>
+            <div class="lang-zh-only"><h4>Culturally Motivated</h4><p>害怕失去文化／宗教認同；行動帶絕對道德確定感；極難談判。</p></div>
+          </article>
+        </div>
+
+        <p>有效抗恐側寫應放棄「人格／外貌」 — 改聚焦「<strong>策劃 / 準備階段的可觀察行為</strong>」（Clutterbuck &amp; Warnes 2011）：物資取得、訓練、目標偵察、偽造證件、資金籌措。</p>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>4 · Profiling Terrorists — Why Is It Hard?</h2>
+
+        <h3>4.1 Myth vs Reality</h3>
+        <div class="profile-compare">
+          <div class="profile-col predicted"><h5>❌ Popular Myths</h5>
+            <ul>
+              <li>Terrorists are mostly mentally ill</li>
+              <li>Mostly Middle-Eastern men</li>
+              <li>Easily identified by appearance</li>
+              <li>Single motive</li>
+            </ul>
+          </div>
+          <div class="profile-col actual"><h5>✓ Research Reality</h5>
+            <ul>
+              <li>Organized groups have NO excess mental illness (Silke 2008) — stability is required</li>
+              <li>Multiple motivations (rational / psychological / cultural)</li>
+              <li>Leaders are educated; sophisticated (if biased) analysis</li>
+              <li>MI5: "no single demographic profile"</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>4.2 U.S. Army &amp; RAND Typology</h3>
+        <div class="area-grid">
+          <article class="area-card area-1"><div class="area-icon">R</div>
+            <div class="lang-en-only"><h4>Rationally Motivated</h4><p>Clear political/social/economic goals; usually avoids casualties; attacks infrastructure.</p></div>
+          </article>
+          <article class="area-card area-2"><div class="area-icon">P</div>
+            <div class="lang-en-only"><h4>Psychologically Motivated</h4><p>Personal failure + revenge motive; rarely negotiates; targets persons. <strong>Most lone wolves fit here.</strong></p></div>
+          </article>
+          <article class="area-card area-3"><div class="area-icon">C</div>
+            <div class="lang-en-only"><h4>Culturally Motivated</h4><p>Fear of cultural/religious extinction; acts with absolute moral certainty; very hard to negotiate.</p></div>
+          </article>
+        </div>
+
+        <p>Effective counter-terror profiling should drop "personality/appearance" — focus on <strong>observable planning/preparation behaviors</strong> (Clutterbuck &amp; Warnes 2011): material acquisition, training, target recon, fake documents, fundraising.</p>
+      </div>
+    </section>
+
+    <section id="lone-wolf" class="section-card">
+      <div class="lang-zh-only">
+        <h2>5 · Lone Wolf 案例</h2>
+        <p>美國占全球 lone wolf 攻擊的 <strong>42%</strong>（1968–2007）。下方四案是教科書級的代表：</p>
+
+        <div class="timeline">
+          <div class="timeline-item"><span class="year">1978–1995</span>
+            <h4>Theodore Kaczynski（Unabomber）</h4>
+            <p>哈佛畢業、隱居蒙大拿荒野 25 年；17 年間 16 件郵包炸彈、3 死 23 重傷。攻擊目標：大學教授、航空業（故名 UN + A）。動機：反工業科技革命。家人認為他有精神疾患，但他拒絕「精神錯亂無罪」抗辯；認罪換取免死。</p>
+          </div>
+          <div class="timeline-item"><span class="year">1995</span>
+            <h4>Timothy McVeigh — Oklahoma City Bombing</h4>
+            <p>退役陸軍士兵；卡車炸彈摧毀 Murrah 聯邦大樓；168 死（含許多兒童）、500+ 傷。動機：對聯邦政府「霸凌」的訊息。9/11 之前美國最慘重的恐怖攻擊。</p>
+          </div>
+          <div class="timeline-item"><span class="year">1996–2003</span>
+            <h4>Eric Rudolph</h4>
+            <p>1996 Atlanta Olympic Park 爆炸（1 死 111 傷）；之後攻擊提供墮胎服務的診所、同志酒吧。在阿帕拉契荒野作為求生者潛逃 5 年；FBI 十大通緝犯。</p>
+          </div>
+          <div class="timeline-item"><span class="year">2001</span>
+            <h4>Bruce Ivins（懷疑的炭疽菌信件兇手）</h4>
+            <p>9/11 後 1 個月開始，含武器級炭疽菌孢子的信件寄給多名美國參議員與媒體；5 死、15 重病、22 例感染。FBI 後鎖定資深生物防禦研究員 Ivins，他於 2008 服藥自殺；2010 年 FBI 正式結案，但學界仍有質疑。</p>
+          </div>
+        </div>
+
+        <div class="callout callout-tip">
+          <strong>🐺 共同特徵：</strong>
+          <ul style="margin-bottom:0">
+            <li>計畫周詳、自籌資金、不自殺、計畫脫逃</li>
+            <li>人際與社交技能差、社會孤立</li>
+            <li>多有可辨識的精神或情緒問題（與組織恐怖分子相反）</li>
+            <li>多採用爆裂物（美國 lone wolves 用槍械比例高於他國）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>5 · Lone Wolf Cases</h2>
+        <p>The U.S. accounts for <strong>42%</strong> of global lone-wolf attacks (1968–2007). Four textbook examples:</p>
+
+        <div class="timeline">
+          <div class="timeline-item"><span class="year">1978–1995</span>
+            <h4>Theodore Kaczynski (Unabomber)</h4>
+            <p>Harvard graduate; isolated in Montana for 25 years; 16 mail bombs over 17 years; 3 dead, 23 seriously injured. Targets: <strong>UN</strong>iversity professors + <strong>A</strong>irlines. Anti-industrial-technology motive. Family thought him mentally ill; he refused an insanity plea; pled guilty to avoid death.</p>
+          </div>
+          <div class="timeline-item"><span class="year">1995</span>
+            <h4>Timothy McVeigh — Oklahoma City Bombing</h4>
+            <p>Army veteran; truck bomb destroyed Murrah Federal Building; 168 dead (many children), 500+ injured. Motive: send the federal government a "bullying" message. Deadliest U.S. terror attack before 9/11.</p>
+          </div>
+          <div class="timeline-item"><span class="year">1996–2003</span>
+            <h4>Eric Rudolph</h4>
+            <p>1996 Atlanta Olympic Park bombing (1 dead, 111 injured); later attacks on abortion clinics and gay nightclubs. Fugitive in the Appalachian wilderness for 5 years; FBI Ten Most Wanted.</p>
+          </div>
+          <div class="timeline-item"><span class="year">2001</span>
+            <h4>Bruce Ivins (suspected anthrax killer)</h4>
+            <p>One month after 9/11, weapons-grade anthrax letters sent to U.S. senators and media; 5 dead, 15 seriously ill, 22 infections. FBI later focused on senior biodefense researcher Ivins, who took a fatal acetaminophen overdose in 2008; FBI formally closed the case in 2010 but doubt remains.</p>
+          </div>
+        </div>
+
+        <div class="callout callout-tip">
+          <strong>🐺 Common traits:</strong>
+          <ul style="margin-bottom:0">
+            <li>Meticulously planned, self-financed, non-suicidal, plan to escape</li>
+            <li>Poor interpersonal/social skills, isolated</li>
+            <li>Many have identifiable mental/emotional issues (unlike organized terrorists)</li>
+            <li>Explosives first weapon (firearms more common in U.S. lone wolves than abroad)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="passenger" class="section-card">
+      <div class="lang-zh-only">
+        <h2>6 · 機場乘客篩查的演化</h2>
+
+        <h3>6.1 1970s — Dailey & Pickrel 的 skyjacker profile</h3>
+        <p>FAA 兩位心理學家發展，原則：「<strong>不含服裝或族群類別元素、不違反憲法權利、且已被法院測試</strong>」。典型 skyjacker：社會不成功、社交與工作不足、無助／絕望感、可能自殺傾向。可在 1/100,000 旅客中辨識高風險；87% 攔截潛在 skyjackers。</p>
+
+        <h3>6.2 演化中的多套系統</h3>
+        <table class="compare-table">
+          <thead><tr><th>系統</th><th>年代</th><th>核心</th></tr></thead>
+          <tbody>
+            <tr><td><strong>CAPPS</strong></td><td>1990s</td><td>從基本購票資料（姓名、地址、付費方式）辨識可疑模式（單程、現金、單獨旅行）。易被假身分擊敗 — 9/11 凸顯。</td></tr>
+            <tr><td><strong>CAPPS II</strong></td><td>2003</td><td>擴展為身分確認 + 信用 + 居住 + 旅行 + 採購模式。因隱私疑慮終止。</td></tr>
+            <tr><td><strong>Secure Flight</strong></td><td>2008</td><td>以「no-fly / selectee list」比對 TSDB。多次將孩童誤列。</td></tr>
+            <tr><td><strong>ATS</strong></td><td>1990s 起 → 9/11 後擴展</td><td>為所有跨境旅客指派一個威脅評等；保存 40 年；旅客無權依隱私法檢視評等。</td></tr>
+            <tr><td><strong>TSDB</strong></td><td>2003 起</td><td>FBI 維護的恐怖分子篩選資料庫；多機構共用；每天 1,200–1,500 筆增減。</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <strong>🛂 為什麼「外貌側寫」會失敗？</strong>
+          <ul style="margin-bottom:0">
+            <li><strong>Shoe Bomber</strong>（Richard Reid）：英國公民</li>
+            <li><strong>Underwear Bomber</strong>（Umar Farouk Abdulmutallab）：奈及利亞黑人，富有銀行家之子</li>
+            <li><strong>Jihad Jane</strong>（Colleen LaRose）：美國金髮藍眼女性</li>
+          </ul>
+          <p style="margin-bottom:0;margin-top:.5rem">恐怖團體會故意招募「不符外貌側寫」的成員突破篩查。</p>
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>6 · Evolution of Airport Screening</h2>
+
+        <h3>6.1 1970s — Dailey &amp; Pickrel's Skyjacker Profile</h3>
+        <p>Two FAA psychologists; principle: "<strong>no dress or ethnic-group elements, no constitutional violations, court-tested</strong>." Typical skyjacker: socially unsuccessful, helpless/hopeless, possibly suicidal. Identifies high-risk at 1/100,000; would have caught 87% of past skyjackers.</p>
+
+        <h3>6.2 The Layered Systems</h3>
+        <table class="compare-table">
+          <thead><tr><th>System</th><th>Era</th><th>Core</th></tr></thead>
+          <tbody>
+            <tr><td><strong>CAPPS</strong></td><td>1990s</td><td>Flags patterns from basic ticketing data. Defeated by fake IDs — 9/11 exposed this.</td></tr>
+            <tr><td><strong>CAPPS II</strong></td><td>2003</td><td>Proposed identity + credit + residence + travel + purchase tracking. Killed over privacy.</td></tr>
+            <tr><td><strong>Secure Flight</strong></td><td>2008</td><td>Matches against TSDB no-fly / selectee list. Notorious child-name errors.</td></tr>
+            <tr><td><strong>ATS</strong></td><td>1990s → expanded post-9/11</td><td>Threat rating for every cross-border traveler; retained 40 years; not Privacy Act accessible.</td></tr>
+            <tr><td><strong>TSDB</strong></td><td>Since 2003</td><td>FBI's terrorist screening database; shared across agencies; 1,200–1,500 daily edits.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <strong>🛂 Why appearance-based profiles fail:</strong>
+          <ul style="margin-bottom:0">
+            <li><strong>Shoe Bomber</strong> (Richard Reid): British citizen</li>
+            <li><strong>Underwear Bomber</strong> (Umar Farouk Abdulmutallab): tall Nigerian, son of a wealthy banker</li>
+            <li><strong>Jihad Jane</strong> (Colleen LaRose): American blonde, blue-eyed woman</li>
+          </ul>
+          <p style="margin-bottom:0;margin-top:.5rem">Terror groups deliberately recruit recruits who don't fit the visual stereotype.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="spot-fast" class="section-card">
+      <div class="lang-zh-only">
+        <h2>7 · SPOT 與 FAST — 行為觀察 vs 讀心</h2>
+
+        <h3>7.1 SPOT — Behavior Detection Officers (BDOs)</h3>
+        <p>TSA 2007 起全面實施；2010 年約 3,000 名 BDO 於 161 機場執勤。BDOs 觀察排隊乘客的「高壓力／恐懼／欺瞞」行為指標；不具警察身分、不能逮捕。理論基礎為 Paul Ekman 的 Facial Action Coding System 與微表情研究。</p>
+
+        <div class="callout callout-warn">
+          <strong>📉 GAO 2010 評估：</strong>
+          <ul style="margin-bottom:0">
+            <li>「TSA 在全國部署前未驗證 SPOT 的科學基礎」</li>
+            <li>「無科學共識認為行為偵測可靠用於反恐」</li>
+            <li>TSA 未充分利用資源系統性蒐集評估資料</li>
+            <li>計畫實施以來抓到的多為非法移民，極少涉及恐怖主義</li>
+          </ul>
+          <p style="margin-bottom:0;margin-top:.5rem">Ekman 自己承認：「10 個顯露『可疑』行為者中 9 個有完全無辜的理由」 — 國家研究院呼籲在科學驗證前審慎熱忱。</p>
+        </div>
+
+        <h3>7.2 FAST / MALINTENT — 讀「未來意圖」</h3>
+        <p>DHS 2008 起測試的「讀心」系統。原理近 polygraph，但<strong>遠端、被動</strong>：</p>
+        <ol>
+          <li>遠端心血管 + 呼吸感測器</li>
+          <li>遠端 eye tracker（眼球位置、視線、瞳孔直徑）</li>
+          <li>熱影像攝影機（皮膚電活動、呼吸、眼動）</li>
+          <li>高解析影像 + 音訊（臉部表情、肢體、聲調變化）</li>
+          <li>未來：費洛蒙偵測等</li>
+        </ol>
+        <p>DHS 宣稱「78% 偵測 malicious intent、80% 偵測欺瞞」 — 但實驗室資料基於 140 名「被指示說謊」志願者；機場實效未經驗證。</p>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>7 · SPOT &amp; FAST — Behavior Observation vs Mind-Reading</h2>
+
+        <h3>7.1 SPOT — Behavior Detection Officers (BDOs)</h3>
+        <p>TSA fully implemented in 2007; ~3,000 BDOs at 161 airports by 2010. They watch queues for "high stress / fear / deception" indicators; not law-enforcement; can't arrest. Built on Paul Ekman's Facial Action Coding System and microexpression work.</p>
+
+        <div class="callout callout-warn">
+          <strong>📉 GAO 2010 evaluation:</strong>
+          <ul style="margin-bottom:0">
+            <li>"TSA deployed SPOT nationwide without first validating the science"</li>
+            <li>"No scientific consensus that behavior detection can be reliably used for counterterrorism"</li>
+            <li>TSA didn't properly collect/use evaluation data</li>
+            <li>Most arrests were of undocumented immigrants — few tied to terrorism</li>
+          </ul>
+          <p style="margin-bottom:0;margin-top:.5rem">Ekman concedes: '9 of 10 displaying suspicious behavior have entirely innocent reasons.' The NRC urged caution before scientific validation.</p>
+        </div>
+
+        <h3>7.2 FAST / MALINTENT — Reading "Future Intent"</h3>
+        <p>DHS-tested "mind-reading" system. Polygraph-like but <strong>remote and passive</strong>:</p>
+        <ol>
+          <li>Remote cardiovascular + respiratory sensor</li>
+          <li>Remote eye tracker (position, gaze, pupil)</li>
+          <li>Thermal camera (skin conductance, respiration, eye motion)</li>
+          <li>High-res video + audio (face, body, vocal pitch)</li>
+          <li>Future: pheromone detection, etc.</li>
+        </ol>
+        <p>DHS claims "78% malicious intent, 80% deception" — but lab data on 140 instructed-to-lie volunteers; airport effectiveness unverified.</p>
+      </div>
+    </section>
+
+    <section id="deception" class="section-card">
+      <div class="lang-zh-only">
+        <h2>8 · 測謊：科學、迷思與最新研究</h2>
+
+        <h3>8.1 殘酷的事實</h3>
+        <p>30+ 年研究：<strong>無論專業或一般人，幾乎都無法穩定偵測欺瞞</strong>（Loftus 2011）。9/11 攻擊者一共向美國官員說了至少 3 次謊（簽證申請、入境、登機）；無一被當場揪出。</p>
+
+        <h3>8.2 為什麼大家以為自己能測謊？</h3>
+        <ul>
+          <li>依賴錯誤線索（「撒謊者會迴避眼神接觸」）— 這已是<strong>已被駁斥的迷思</strong>，某些文化視低眉迴避為尊敬。</li>
+          <li>日常撒謊太普遍（DePaulo 2003），謊言不「特別」。</li>
+          <li>有些慣性撒謊者甚至自信地相信自己的謊。</li>
+          <li>越自信的偵查員越不準（Ekman & O'Sullivan 1991; Kassin & Fong 1999; Porter 2000）。</li>
+        </ul>
+
+        <h3>8.3 Ekman & O'Sullivan (1991) — 唯一勝過機率的群體</h3>
+        <div class="focus-box">
+          <p>受試者：U.S. Secret Service、CIA、FBI、NSA、DEA、加州警察、法官、心理醫師、大學生、上班族。</p>
+          <p><strong>唯有 Secret Service 探員 (34 人) 全體超過機率，整體 64% 準確；29% 達 80%+。</strong></p>
+          <p style="margin-bottom:0">關鍵差異：他們使用「多重線索」（言語 + 微表情 + 肢體），而非單一指標。</p>
+        </div>
+
+        <h3>8.4 有效的訪談技巧</h3>
+        <div class="profile-compare">
+          <div class="profile-col predicted"><h5>✓ Information-Gathering</h5>
+            <p>「你能告訴我昨天早上你在做什麼？」 開放式問題 → 多話 → 多線索 → 後續可比對其他證據。</p>
+          </div>
+          <div class="profile-col actual"><h5>✗ Accusatory</h5>
+            <p>「你顯然有所隱瞞！」 短促否認 → 線索極少；研究顯示這種方式「降低」測謊準確度。</p>
+          </div>
+        </div>
+
+        <h3>8.5 Cognitive Load 與「不預期問題」</h3>
+        <p>Vrij 等 (2009)：當嫌犯被問到「未預料的問題」，需即時編造，認知負荷上升、停頓增加。Loftus 經典例：「你吃晚餐時誰先吃完？」 — 撒謊者不敢答「不知道」。</p>
+
+        <h3>8.6 「未來意圖」vs「過去事實」</h3>
+        <p>Vrij 等 (2011)：偵測「未來意圖」欺瞞 (70%) 比「過去事實」(55%) 更準確 — 因為嫌犯通常對過去活動已備好說詞，對未來意圖則需臨場編造。建議機場：問「你到達後會做什麼？」而非「你從哪裡來？」。</p>
+
+        <h3>8.7 Thermal Imaging 與 Voice Stress — 科學驗證如何？</h3>
+        <table class="compare-table">
+          <thead><tr><th>技術</th><th>科學狀態</th></tr></thead>
+          <tbody>
+            <tr><td>Thermal imaging</td><td>單獨使用無效；結合訪談後撒謊者面溫顯著上升，但偵查員觀察（72–77%）仍勝過熱影像（64–69%）。對機場來說準確度仍不足。</td></tr>
+            <tr><td>Voice stress (PSE, CVSA)</td><td>Bhatt & Brandon (2008) 30 年 24 研究 + NRC (2010) 結論：「丟硬幣同等準確」；理論前提（micro-tremors）未被科學發現。然而警方仍廣泛使用 — 因為相信「嫌犯如果以為機器能測謊，就會說實話」。</td></tr>
+            <tr><td>Polygraph 衍生（Credibility Assessment Screening System）</td><td>仍在開發；皮膚電 + 指尖血流；有效性未確立。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>8 · Deception: Science, Myths, and Latest Research</h2>
+
+        <h3>8.1 The Harsh Reality</h3>
+        <p>30+ years of research: <strong>almost no one — professional or layperson — reliably detects deception</strong> (Loftus 2011). The 9/11 attackers lied to U.S. officials at least 3 times each (visa, entry, boarding); none was caught.</p>
+
+        <h3>8.2 Why Do People Think They Can?</h3>
+        <ul>
+          <li>They rely on wrong cues ("liars avert gaze") — <strong>debunked myth</strong>; some cultures see lowered eyes as respect.</li>
+          <li>Daily lies are too common (DePaulo 2003); lies don't stand out.</li>
+          <li>Habitual liars sometimes start believing their own lies.</li>
+          <li>The more confident the officer, the less accurate (Ekman &amp; O'Sullivan 1991; Kassin &amp; Fong 1999; Porter 2000).</li>
+        </ul>
+
+        <h3>8.3 Ekman &amp; O'Sullivan (1991) — The One Group That Beat Chance</h3>
+        <div class="focus-box">
+          <p>Tested: U.S. Secret Service, CIA, FBI, NSA, DEA, California cops, judges, psychiatrists, students, working adults.</p>
+          <p><strong>Only Secret Service agents (n=34) beat chance overall — 64% accuracy, with 29% reaching 80%+.</strong></p>
+          <p style="margin-bottom:0">Key: they used multiple cues (verbal + microexpression + body), not a single indicator.</p>
+        </div>
+
+        <h3>8.4 Effective Interview Approaches</h3>
+        <div class="profile-compare">
+          <div class="profile-col predicted"><h5>✓ Information-Gathering</h5>
+            <p>"Tell me what you were doing yesterday morning." Open-ended → more words → more cues → cross-check with other evidence.</p>
+          </div>
+          <div class="profile-col actual"><h5>✗ Accusatory</h5>
+            <p>"You're clearly hiding something!" Short denials → few cues; research shows this <strong>reduces</strong> detection accuracy.</p>
+          </div>
+        </div>
+
+        <h3>8.5 Cognitive Load &amp; "Unanticipated Questions"</h3>
+        <p>Vrij et al. (2009): unanticipated questions force on-the-spot fabrication, raising cognitive load and pauses. Loftus's classic: "Who finished dinner first?" — liars don't dare say "I don't know."</p>
+
+        <h3>8.6 "Future Intent" vs "Past Activities"</h3>
+        <p>Vrij et al. (2011): detecting deception about future intent (70%) was more accurate than about past activities (55%) — suspects rehearse the past but improvise the future. Implication for airports: ask "What will you do when you arrive?" rather than "Where did you come from?"</p>
+
+        <h3>8.7 Thermal Imaging &amp; Voice Stress — Where's the Science?</h3>
+        <table class="compare-table">
+          <thead><tr><th>Tech</th><th>Scientific Status</th></tr></thead>
+          <tbody>
+            <tr><td>Thermal imaging</td><td>Useless alone; with interviews, liars' face temps rose, but interviewer judgment (72–77%) still beat thermal (64–69%). Not accurate enough for airports.</td></tr>
+            <tr><td>Voice stress (PSE, CVSA)</td><td>Bhatt &amp; Brandon (2008) review of 24 studies + NRC (2010): "a coin flip is equally accurate"; the assumed "micro-tremors" don't exist. Police still use it — believing "if suspects think it works, they'll talk."</td></tr>
+            <tr><td>Polygraph-derived (Credibility Assessment Screening System)</td><td>In development; skin conductance + fingertip blood flow; effectiveness not established.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="glossary" class="section-card">
+      <div class="lang-zh-only">
+        <h2>9 · 關鍵詞彙</h2>
+        <table class="compare-table">
+          <thead><tr><th>詞彙</th><th>定義</th></tr></thead>
+          <tbody>
+            <tr><td><strong>ATS</strong></td><td>DHS 對所有跨境旅客指派威脅評等的系統。</td></tr>
+            <tr><td><strong>BDO</strong></td><td>TSA 的行為偵測員，SPOT 的執行者。</td></tr>
+            <tr><td><strong>CAPPS / CAPPS II</strong></td><td>從購票資料篩查乘客的兩代系統。</td></tr>
+            <tr><td><strong>Cognitive load</strong></td><td>當需即時編造時的大腦負擔；測謊重要指標。</td></tr>
+            <tr><td><strong>Drug courier profile</strong></td><td>1980s 用於攔查毒品走私的（常含族裔）側寫。</td></tr>
+            <tr><td><strong>DWB</strong></td><td>「driving while black/brown」種族側寫俗語。</td></tr>
+            <tr><td><strong>FAST / MALINTENT</strong></td><td>DHS 用感測器讀生理反應預測「未來意圖」的系統。</td></tr>
+            <tr><td><strong>Information-gathering vs Accusatory</strong></td><td>有效 vs 失效的訪談取徑。</td></tr>
+            <tr><td><strong>Lone wolf terrorist</strong></td><td>單獨行動、無組織歸屬的恐怖分子。</td></tr>
+            <tr><td><strong>Operation Pipeline</strong></td><td>DEA 訓練警察以 pretext stops 偵查藏毒。</td></tr>
+            <tr><td><strong>Pretext stop</strong></td><td>以輕微交通違規為藉口的攔停。</td></tr>
+            <tr><td><strong>Racial profiling</strong></td><td>警方依 race / ethnicity / national origin 採取行動。</td></tr>
+            <tr><td><strong>SPOT</strong></td><td>TSA 的乘客觀察篩查計畫。</td></tr>
+            <tr><td><strong>Suspect-based profiling</strong></td><td>從歷史資料找出群體特徵與犯罪的統計關聯辨識嫌犯。</td></tr>
+            <tr><td><strong>TSDB</strong></td><td>FBI 維護的恐怖分子篩選資料庫。</td></tr>
+            <tr><td><strong>U.S. v. Sokolow / Whren v. U.S.</strong></td><td>分別允許 drug courier profile 與 pretext stops 的判例。</td></tr>
+            <tr><td><strong>Voiceprint / Voice stress</strong></td><td>聲紋與聲壓力技術；科學支持極弱。</td></tr>
+            <tr><td><strong>Thermal imaging</strong></td><td>偵測臉部溫度變化的測謊技術。</td></tr>
+            <tr><td><strong>Wilkins v. Maryland State Police</strong></td><td>I-95 種族側寫指標性案件。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>9 · Key Concepts</h2>
+        <table class="compare-table">
+          <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+          <tbody>
+            <tr><td><strong>ATS</strong></td><td>DHS system assigning a threat rating to every cross-border traveler.</td></tr>
+            <tr><td><strong>BDO</strong></td><td>TSA Behavior Detection Officer; SPOT's executor.</td></tr>
+            <tr><td><strong>CAPPS / CAPPS II</strong></td><td>Two-generation passenger screening from ticket data.</td></tr>
+            <tr><td><strong>Cognitive load</strong></td><td>Cognitive burden during on-the-spot fabrication; key deception cue.</td></tr>
+            <tr><td><strong>Drug courier profile</strong></td><td>1980s drug-trafficking profile (often racially tinged).</td></tr>
+            <tr><td><strong>DWB</strong></td><td>"Driving while black/brown" — racial-profiling slang.</td></tr>
+            <tr><td><strong>FAST / MALINTENT</strong></td><td>DHS sensor system reading physiology to predict "future intent."</td></tr>
+            <tr><td><strong>Information-gathering vs Accusatory</strong></td><td>Effective vs counterproductive interview styles.</td></tr>
+            <tr><td><strong>Lone wolf terrorist</strong></td><td>Independent terrorist without organizational ties.</td></tr>
+            <tr><td><strong>Operation Pipeline</strong></td><td>DEA training of police to use pretext stops for drug interdiction.</td></tr>
+            <tr><td><strong>Pretext stop</strong></td><td>Stop based on a minor traffic violation as a pretext for searching.</td></tr>
+            <tr><td><strong>Racial profiling</strong></td><td>Police action based on race / ethnicity / national origin.</td></tr>
+            <tr><td><strong>SPOT</strong></td><td>TSA's passenger-observation screening program.</td></tr>
+            <tr><td><strong>Suspect-based profiling</strong></td><td>Using statistical links between group traits and crime to flag suspects.</td></tr>
+            <tr><td><strong>TSDB</strong></td><td>FBI-maintained Terrorist Screening Database.</td></tr>
+            <tr><td><strong>U.S. v. Sokolow / Whren v. U.S.</strong></td><td>Cases allowing the drug courier profile and pretext stops.</td></tr>
+            <tr><td><strong>Voiceprint / Voice stress</strong></td><td>Voice-print and stress technology; weakly supported.</td></tr>
+            <tr><td><strong>Thermal imaging</strong></td><td>Lie-detection technique reading facial temperature changes.</td></tr>
+            <tr><td><strong>Wilkins v. Maryland State Police</strong></td><td>Landmark I-95 racial profiling case.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="summary" class="section-card">
+      <div class="lang-zh-only">
+        <h2>10 · 本章總結</h2>
+        <ol>
+          <li>嫌疑人式側寫從歷史資料推測「可能是某類人」 — 既有實用價值，也易於踩入 racial profiling 紅線。</li>
+          <li>「藥物戰」帶來 drug courier profile + Whren 允許 pretext stops；Lamberth 的 I-95 研究是經典紀錄。</li>
+          <li>9/11 後對中東裔的廣泛盤查重複了藥物戰的種族側寫教訓；Shoe/Underwear Bomber、Jihad Jane 證明外貌側寫易被反利用。</li>
+          <li>有組織恐怖分子「不」多精神疾患；lone wolves 才常有；三類動機（rational / psychological / cultural）。</li>
+          <li>機場篩查層層演化（CAPPS → CAPPS II → Secure Flight → ATS → TSDB），但都有 false positive 與隱私爭議。</li>
+          <li>SPOT 與 FAST 移向「行為／生理觀察」，但 GAO 與 NRC 警告：「未經科學驗證即部署」。</li>
+          <li>測謊是悲觀的科學現實：除少數受訓有素的 Secret Service 探員，多數人不勝過機率；錯誤訓練反而降低準確度。</li>
+          <li>有效訪談 = information-gathering + 未預期問題 + 比較未來意圖與過去事實；Thermal imaging、voice stress 等科技仍缺乏紮實實證。</li>
+        </ol>
+        <div class="callout callout-tip"><strong>🎯 一句話帶走：</strong>「行為比外貌可信；問題比指控有效；驗證比直覺重要。」</div>
+      </div>
+      <div class="lang-en-only">
+        <h2>10 · Chapter Summary</h2>
+        <ol>
+          <li>Suspect-based profiling infers "likely type" from historical data — useful but easy to slide into racial profiling.</li>
+          <li>The "drug war" delivered the drug courier profile + Whren-sanctioned pretext stops; Lamberth's I-95 study is the landmark record.</li>
+          <li>Post-9/11 wide-scale screening of Middle Eastern men reran the drug-war lesson; Shoe/Underwear Bomber and Jihad Jane prove appearance profiles can be exploited.</li>
+          <li>Organized terrorists are NOT typically mentally ill; lone wolves often are; three motives (rational / psychological / cultural).</li>
+          <li>Airport screening evolved through CAPPS → CAPPS II → Secure Flight → ATS → TSDB; all carry false-positive and privacy issues.</li>
+          <li>SPOT and FAST shift toward behavior/physiology, but GAO and NRC warn: "deployed without scientific validation."</li>
+          <li>Deception detection is bleak science: only well-trained Secret Service agents beat chance; bad training reduces accuracy.</li>
+          <li>Effective interviewing = information-gathering + unanticipated questions + comparing future intent with past activities; thermal imaging and voice stress still lack solid evidence.</li>
+        </ol>
+        <div class="callout callout-tip"><strong>🎯 One-liner takeaway:</strong> "Behavior beats appearance; questions beat accusations; validation beats intuition."</div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section-card quiz-container" style="padding:1.25rem"></section>
+  </main>
+</div>
+
+<footer class="site-footer"><div class="container">
+  <p class="copyright">© 2026 葉欲禾 (Gary Yu-Ho YEH) — All Rights Reserved 版權所有</p>
+  <p><span class="lang-zh-only">本互動教材改編自 Bartol &amp; Bartol (2013). <em>Criminal &amp; Behavioral Profiling</em>. SAGE。</span><span class="lang-en-only">Adapted from Bartol &amp; Bartol (2013). <em>Criminal &amp; Behavioral Profiling</em>. SAGE.</span></p>
+  <p><a href="../index.html"><span class="lang-zh-only">← 回到目錄</span><span class="lang-en-only">← Back to TOC</span></a></p>
+</div></footer>
+
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/data/chapter7-quiz.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const c = document.querySelector("#quiz");
+    if (c && window.CBP?.QuizBank?.chapter7) {
+      new window.CBP.Quiz({ container: c, bank: window.CBP.QuizBank.chapter7.questions, count: 10,
+        onSubmit: p => console.log("[Ch7 Quiz]", p) });
+    }
+  });
+</script>
+</body>
+</html>

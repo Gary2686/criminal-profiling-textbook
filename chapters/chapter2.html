@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 2：犯罪現場側寫 — Criminal & Behavioral Profiling 互動教材</title>
+<meta name="description" content="《Criminal & Behavioral Profiling》第二章中英雙語互動教材：FBI BSU / NCAVC 歷史、Organized vs Disorganized 二分法、案件連結分析、profiler 認知陷阱。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="lang-zh">
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">
+      <span>🔍</span>
+      <span class="lang-zh-only">犯罪與行為側寫 · 互動教材</span>
+      <span class="lang-en-only">Criminal & Behavioral Profiling · Interactive</span>
+    </a>
+    <div class="lang-toggle" role="group" aria-label="Language switcher">
+      <button data-lang="zh" class="active">中文</button>
+      <button data-lang="en">English</button>
+    </div>
+  </div>
+</header>
+
+<section class="chapter-hero">
+  <div class="container">
+    <div class="lang-zh-only">
+      <p style="opacity:.85;letter-spacing:.3em;margin-bottom:.5rem">CHAPTER 2</p>
+      <h1>犯罪現場側寫：FBI 的誕生與爭議</h1>
+      <p class="subtitle">從 J. Edgar Hoover 對心理學的不信任，到 Behavioral Science Unit 的誕生、Organized/Disorganized 二分法的興盛與被推翻，以及為什麼 profiler 常常「準到嚇人」其實是錯覺。</p>
+    </div>
+    <div class="lang-en-only">
+      <p style="opacity:.85;letter-spacing:.3em;margin-bottom:.5rem">CHAPTER 2</p>
+      <h1>Crime Scene Profiling: The Birth and Battles of the FBI Model</h1>
+      <p class="subtitle">From J. Edgar Hoover's distrust of psychology to the rise of the Behavioral Science Unit, the spectacular rise — and statistical fall — of the Organized/Disorganized dichotomy, and why "eerily accurate" profiles often come from cognitive bias rather than skill.</p>
+    </div>
+  </div>
+</section>
+
+<div class="chapter-layout">
+  <aside>
+    <nav class="chapter-toc">
+      <div class="lang-zh-only"><h4>本章目錄</h4></div>
+      <div class="lang-en-only"><h4>Table of Contents</h4></div>
+      <ol>
+        <li><a href="#objectives"><span class="lang-zh-only">學習目標</span><span class="lang-en-only">Learning Objectives</span></a></li>
+        <li><a href="#fbi-origins"><span class="lang-zh-only">FBI 側寫的起源</span><span class="lang-en-only">FBI Origins</span></a></li>
+        <li><a href="#ncavc"><span class="lang-zh-only">NCAVC 四單位</span><span class="lang-en-only">NCAVC's 4 Units</span></a></li>
+        <li><a href="#seminal"><span class="lang-zh-only">兩篇開創論文</span><span class="lang-en-only">Two Seminal Papers</span></a></li>
+        <li><a href="#od-typology"><span class="lang-zh-only">O/D 二分法興起</span><span class="lang-en-only">The O/D Typology</span></a></li>
+        <li><a href="#ccm"><span class="lang-zh-only">CCM 與 typology</span><span class="lang-en-only">CCM & Typology</span></a></li>
+        <li><a href="#terminology"><span class="lang-zh-only">側寫術語</span><span class="lang-en-only">Profiling Terminology</span></a></li>
+        <li><a href="#linkage"><span class="lang-zh-only">案件連結分析</span><span class="lang-en-only">Case Linkage</span></a></li>
+        <li><a href="#clinical-actuarial"><span class="lang-zh-only">Clinical vs Actuarial</span><span class="lang-en-only">Clinical vs Actuarial</span></a></li>
+        <li><a href="#accuracy"><span class="lang-zh-only">準確度與實用性</span><span class="lang-en-only">Accuracy & Usefulness</span></a></li>
+        <li><a href="#biases"><span class="lang-zh-only">三大認知陷阱</span><span class="lang-en-only">3 Cognitive Pitfalls</span></a></li>
+        <li><a href="#glossary"><span class="lang-zh-only">關鍵詞彙</span><span class="lang-en-only">Key Concepts</span></a></li>
+        <li><a href="#summary"><span class="lang-zh-only">本章總結</span><span class="lang-en-only">Summary</span></a></li>
+        <li><a href="#quiz"><span class="lang-zh-only">自我評量</span><span class="lang-en-only">Self-Quiz</span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main>
+
+    <!-- Learning Objectives -->
+    <section id="objectives" class="section-card">
+      <div class="lang-zh-only">
+        <h2>學習目標</h2>
+        <p>讀完本章後，你應該能夠：</p>
+        <ul>
+          <li>說出 FBI BSU、NCAVC、BAU、ViCAP 各自的成立年代與功能。</li>
+          <li>還原 Douglas–Ressler 1979–1983 監獄訪談的核心內容與資料限制（n=36、便利樣本）。</li>
+          <li>背出 Organized vs Disorganized offender 各 5 項以上的特徵差異。</li>
+          <li>區分 MO、Signature、Personation、Staging、Trophy、Souvenir、Undoing 七個現場術語。</li>
+          <li>解釋 case linkage 為何需要「跨案一致性 + 跨人區別性」兩前提同時成立。</li>
+          <li>說明 Canter 等 (2004) 為何認為 O/D 二分法缺乏經驗支持。</li>
+          <li>定義 Clinical vs Actuarial 兩種側寫取徑的差別；理解 base rate 概念。</li>
+          <li>辨識 Confirmation bias、Self-serving bias、Fundamental attribution error 三大認知陷阱在 profiling 中的具體表現。</li>
+        </ul>
+      </div>
+      <div class="lang-en-only">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>State the founding dates and functions of the FBI BSU, NCAVC, BAU, and ViCAP.</li>
+          <li>Reconstruct the Douglas–Ressler 1979–83 prison interviews and their methodological limits (n=36, convenience sample).</li>
+          <li>List 5+ differentiating traits between organized and disorganized offenders.</li>
+          <li>Distinguish 7 scene-analysis terms: MO, Signature, Personation, Staging, Trophy, Souvenir, Undoing.</li>
+          <li>Explain why case linkage requires both within-offender consistency AND between-offender distinctiveness.</li>
+          <li>Explain why Canter et al. (2004) concluded the O/D dichotomy lacks empirical support.</li>
+          <li>Differentiate clinical vs actuarial approaches; understand "base rate."</li>
+          <li>Identify how confirmation bias, self-serving bias, and fundamental attribution error manifest in profiling.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FBI Origins -->
+    <section id="fbi-origins" class="section-card">
+      <div class="lang-zh-only">
+        <h2>1 · FBI 側寫的起源 — Hoover 之後的解封</h2>
+        <p>FBI 的前身於 1908 年成立；1924 年 J. Edgar Hoover 出任局長，1934 年正式更名為 FBI。Hoover 對心理學與社會科學公開「不感興趣」（Douglas &amp; Olshaker, 1995）— 在他掌權近 50 年期間，心理學是「後勤」式的存在。他用心理戰術操控政壇，但拒絕設立公開的心理學單位。</p>
+        <p><strong>1972 年 Hoover 過世</strong>是個分水嶺：限制鬆綁，同年 Quantico 新 FBI 學院落成，BSU 隨之誕生，將 criminology、psychology、sociology 整合為「行為科學」訓練核心。</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="year">1972</span>
+            <h4>BSU 成立</h4>
+            <p>FBI 學院 Quantico 校區開幕；BSU 整合行為科學進入聯邦執法訓練。</p>
+          </div>
+          <div class="timeline-item">
+            <span class="year">1972–1981</span>
+            <h4>初期側寫案件</h4>
+            <p>Pinizzotto (1984) 統計：BSU 在這 10 年間提供 192 件側寫協助。</p>
+          </div>
+          <div class="timeline-item">
+            <span class="year">1981</span>
+            <h4>Douglas 創設專責側寫單位</h4>
+            <p>當年接案 54 件，此後逐年攀升。</p>
+          </div>
+          <div class="timeline-item">
+            <span class="year">1984</span>
+            <h4>NCAVC 成立</h4>
+            <p>Reagan 總統下令設立國家暴力犯罪分析中心，由 FBI 督導；下含 BAU 與 ViCAP。</p>
+          </div>
+          <div class="timeline-item">
+            <span class="year">1995</span>
+            <h4>Douglas 退休前</h4>
+            <p>該機構每年分析超過 1,000 件案。</p>
+          </div>
+        </div>
+
+        <blockquote>「我們不會在新鮮的犯罪現場走來走去就出現靈感或通靈閃光。這是個歸納與演繹推理、犯罪偵查經驗、犯罪行為知識、事實與統計機率交織的世界。」<br>— FBI 官網對 NCAVC 工作的官方描述</blockquote>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>1 · FBI Origins — Unlocking After Hoover</h2>
+        <p>The FBI's predecessor began in 1908; J. Edgar Hoover took charge in 1924, the agency was renamed in 1934. Hoover publicly disdained psychology and the social sciences (Douglas &amp; Olshaker, 1995) — for nearly 50 years, psychology in the Bureau was a "back room" affair. He used psychological tactics on politicians but refused to create a public psychology unit.</p>
+        <p><strong>Hoover's death in 1972</strong> was the watershed. Restrictions eased, a new Academy opened at Quantico, and the BSU was born — integrating criminology, psychology, and sociology into "behavioral science" training for federal law enforcement.</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="year">1972</span>
+            <h4>BSU established</h4>
+            <p>The FBI Academy at Quantico opens; the BSU brings behavioral science into federal training.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="year">1972–1981</span>
+            <h4>Early caseload</h4>
+            <p>Pinizzotto (1984): BSU provided profiling assistance on 192 cases.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="year">1981</span>
+            <h4>Douglas creates dedicated profiling unit</h4>
+            <p>54 cases that year; caseload climbed every year after.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="year">1984</span>
+            <h4>NCAVC established</h4>
+            <p>President Reagan creates the National Center for the Analysis of Violent Crime under the FBI, housing BAU and ViCAP.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="year">1995</span>
+            <h4>Douglas's retirement era</h4>
+            <p>The agency was analyzing more than 1,000 cases per year.</p>
+          </div>
+        </div>
+
+        <blockquote>"[Agents] do not get vibes or experience psychic flashes while walking around fresh crime scenes. Rather, it is an exciting world of investigation and research — a world of inductive and deductive reasoning; crime-solving experience; and knowledge of criminal behavior, facts, and statistical probabilities."<br>— FBI's official description of NCAVC work</blockquote>
+      </div>
+    </section>
+
+    <!-- NCAVC -->
+    <section id="ncavc" class="section-card">
+      <div class="lang-zh-only">
+        <h2>2 · NCAVC 的四個單位</h2>
+        <p>1984 年 NCAVC 成立後，下設四個專責單位。下方卡片快速幫你定位：</p>
+      </div>
+      <div class="lang-en-only">
+        <h2>2 · NCAVC's Four Units</h2>
+        <p>Since 1984, NCAVC has been organized into four units. The cards below summarize each:</p>
+      </div>
+
+      <div class="area-grid">
+        <article class="area-card area-1">
+          <div class="area-icon">1</div>
+          <div class="lang-zh-only">
+            <h4>BAU-1：反恐威脅評估</h4>
+            <p>恐怖主義、縱火、爆炸、跟蹤、網路犯罪、急性危機事件。</p>
+          </div>
+          <div class="lang-en-only">
+            <h4>BAU-1: Counterterrorism &amp; Threats</h4>
+            <p>Terrorism, arson, bombings, stalking, cyber violations, active crisis situations.</p>
+          </div>
+        </article>
+        <article class="area-card area-2">
+          <div class="area-icon">2</div>
+          <div class="lang-zh-only">
+            <h4>BAU-2：成人犯罪</h4>
+            <p>連續、激情、大規模等命案；性侵、綁架、失蹤者案件、針對成人的其他暴力犯罪。</p>
+          </div>
+          <div class="lang-en-only">
+            <h4>BAU-2: Crimes Against Adults</h4>
+            <p>Serial, spree, mass and other murders; sexual assaults, kidnappings, missing persons; other adult-victim violence.</p>
+          </div>
+        </article>
+        <article class="area-card area-3">
+          <div class="area-icon">3</div>
+          <div class="lang-zh-only">
+            <h4>BAU-3：兒童犯罪</h4>
+            <p>兒童綁架、神秘失蹤、命案、性侵；2011 年起每年僅約 100 件陌生人綁架案，但每一件都是重大關注。</p>
+          </div>
+          <div class="lang-en-only">
+            <h4>BAU-3: Crimes Against Children</h4>
+            <p>Child abductions, mysterious disappearances, homicide, sexual victimization. Only ~100 stranger abductions/year nationally — but each is grave.</p>
+          </div>
+        </article>
+        <article class="area-card area-4">
+          <div class="area-icon">4</div>
+          <div class="lang-zh-only">
+            <h4>ViCAP：暴力犯罪逮捕計畫</h4>
+            <p>跨轄區協作的大型案件資料庫，蒐集全美命案、性侵、失蹤者、無名屍等資料，協助追蹤連續犯。</p>
+          </div>
+          <div class="lang-en-only">
+            <h4>ViCAP</h4>
+            <p>A cross-jurisdiction repository of major U.S. cases — homicides, sexual assaults, missing persons, unidentified remains — to help track serial offenders.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="callout callout-tip">
+        <div class="lang-zh-only"><strong>💡 補充：</strong>FBI 在各 field office 設有 <strong>CARD（Child Abduction Rapid Deployment）</strong>快速反應隊；許多州警則設立 <strong>CART（Child Abduction Response Team）</strong>。兩者在綁架案發生後可在數小時內到達現場。</div>
+        <div class="lang-en-only"><strong>💡 Note:</strong> FBI field offices host <strong>CARD (Child Abduction Rapid Deployment)</strong> teams; many state police have <strong>CART (Child Abduction Response Team)</strong>. Both can be on-scene within hours.</div>
+      </div>
+    </section>
+
+    <!-- Seminal Papers -->
+    <section id="seminal" class="section-card">
+      <div class="lang-zh-only">
+        <h2>3 · 1980 年兩篇開創論文</h2>
+        <p>側寫真正進入美國執法界主流，靠的是 1980 年 <strong>FBI Law Enforcement Bulletin</strong> 中刊出的兩篇文章：</p>
+
+        <div class="focus-box">
+          <span class="focus-label">PAPER 1</span>
+          <h4>Ault &amp; Reese (1980) — "A Psychological Assessment of Crime Profiling"</h4>
+          <p>用一個東海岸連續強姦案（2 年、7 名受害者）介紹側寫概念。BSU 提出嫌犯描述：白人男性、25–35 歲、離異或分居、勉強就業、高中學歷、自我形象差、住在案發附近、可能有偷窺癖。3 天後警方鎖定 40 名嫌犯，最終 1 週內逮捕真兇。</p>
+          <p>論文也提供「申請側寫須附上的資料清單」：完整現場照片、解剖報告、案件報告、證人訪談 — 至今仍是執法的標準操作。</p>
+          <p><strong>關鍵金句：</strong>「Profiles are not the result of magical incantations and are not always accurate.」</p>
+        </div>
+
+        <div class="focus-box">
+          <span class="focus-label">PAPER 2</span>
+          <h4>Hazelwood &amp; Douglas (1980) — "The Lust Murderer"</h4>
+          <p>引入兩個被全球廣為引用的概念：</p>
+          <ul>
+            <li><strong>Organized nonsocial offender</strong>：有條理、狡猾、可表現親和、犯案地點離家較遠。</li>
+            <li><strong>Disorganized asocial offender</strong>：缺乏狡猾、反社會、關係困難、犯案地點靠近住處。</li>
+          </ul>
+          <p>同時也指出「現場本身會反映兇手是哪一類」 — 衍生出「O/D crime scene」。但他們自己也承認此屬「藝術而非科學」(The process is an art and not a science)。</p>
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>3 · The Two Seminal 1980 Papers</h2>
+        <p>Profiling entered U.S. law enforcement's mainstream through two 1980 papers in the <strong>FBI Law Enforcement Bulletin</strong>:</p>
+
+        <div class="focus-box">
+          <span class="focus-label">PAPER 1</span>
+          <h4>Ault &amp; Reese (1980) — "A Psychological Assessment of Crime Profiling"</h4>
+          <p>Used a 2-year, 7-victim serial rape case on the East Coast. BSU described the offender as: white male, 25–35, divorced/separated, marginally employed, high school education, poor self-image, living nearby, likely a peeping Tom. Within 3 days police narrowed to 40 suspects; arrested the true offender within a week.</p>
+          <p>The paper also laid out the checklist of materials a profiler needs — complete scene photos, autopsy, full report, witness interviews — still standard practice.</p>
+          <p><strong>Key quote:</strong> "Profiles are not the result of magical incantations and are not always accurate."</p>
+        </div>
+
+        <div class="focus-box">
+          <span class="focus-label">PAPER 2</span>
+          <h4>Hazelwood &amp; Douglas (1980) — "The Lust Murderer"</h4>
+          <p>Introduced two globally cited concepts:</p>
+          <ul>
+            <li><strong>Organized nonsocial offender</strong>: methodical, cunning, amiable, crimes at a distance from home.</li>
+            <li><strong>Disorganized asocial offender</strong>: lacking cunning, aversion to society, relationship trouble, crimes close to home.</li>
+          </ul>
+          <p>And crucially: the crime scene itself reflects the offender's category — giving us the "O/D crime scene." Even so, the authors admitted: "The process is an art and not a science."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- O/D Typology -->
+    <section id="od-typology" class="section-card">
+      <div class="lang-zh-only">
+        <h2>4 · Organized vs Disorganized — 興起與被推翻</h2>
+
+        <h3>4.1 Douglas–Ressler 監獄訪談 (1979–1983)</h3>
+        <p>Douglas 與 Ressler 在巡迴訓練各執法機構時，順道訪談被定罪的兇手。他們發現「訪到 10–12 個就看出端倪」，並與 Ann Burgess 教授合作申請國家司法研究院經費，由 Burgess 設計 57 頁問卷。專案名 <strong>Patterns of Homicide Crime Scene Project</strong> 最終訪談 36 位囚犯：</p>
+        <ul>
+          <li>24 名 organized（合計 97 名受害者）</li>
+          <li>12 名 disorganized（合計 21 名受害者）</li>
+        </ul>
+
+        <div class="callout callout-warn">
+          <strong>⚠️ 樣本限制 (Devery, 2010):</strong> 「即使是當時的連續殺人犯，這個樣本也可能不具代表性 — 它是便利樣本，只訪了願意說話的人。沒有對照組，無法說這些特徵在一般社區中有多常見。」此外，36 人中有些只殺過 1–2 人，更精確的稱呼是「性殺人犯」而非「連續殺人犯」。
+        </div>
+
+        <h3>4.2 1985 FBI 表格：兩組對比</h3>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>4 · Organized vs Disorganized — Rise &amp; Fall</h2>
+
+        <h3>4.1 The Douglas–Ressler Prison Interviews (1979–1983)</h3>
+        <p>Touring training programs at law enforcement agencies, Douglas and Ressler interviewed convicted murderers in nearby prisons. After 10–12 they "could see something." Partnering with Prof. Ann Burgess (NIJ-funded, 57-page questionnaire), the <strong>Patterns of Homicide Crime Scene Project</strong> ultimately interviewed 36 inmates:</p>
+        <ul>
+          <li>24 organized (97 victims combined)</li>
+          <li>12 disorganized (21 victims combined)</li>
+        </ul>
+
+        <div class="callout callout-warn">
+          <strong>⚠️ Sample limits (Devery, 2010):</strong> "It is highly unlikely the sample was representative even of serial killers of their time — it was one of convenience. Without a control sample, characteristics cannot tell us how common they are in the general community." Some interviewees had killed only once or twice — better called "sexual murderers" than "serial killers."
+        </div>
+
+        <h3>4.2 The 1985 FBI Comparison Table</h3>
+      </div>
+
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th><span class="lang-zh-only">向度</span><span class="lang-en-only">Dimension</span></th>
+            <th>Organized</th>
+            <th>Disorganized</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="lang-zh-only">智力</span><span class="lang-en-only">Intelligence</span></td>
+            <td><span class="lang-zh-only">中等以上</span><span class="lang-en-only">Average or above</span></td>
+            <td><span class="lang-zh-only">中等以下</span><span class="lang-en-only">Below average</span></td>
+          </tr>
+          <tr>
+            <td><span class="lang-zh-only">社交能力</span><span class="lang-en-only">Social</span></td>
+            <td><span class="lang-zh-only">良好、可表現親和</span><span class="lang-en-only">Socially competent</span></td>
+            <td><span class="lang-zh-only">社交不足</span><span class="lang-en-only">Socially inadequate</span></td>
+          </tr>
+          <tr>
+            <td><span class="lang-zh-only">工作</span><span class="lang-en-only">Work</span></td>
+            <td><span class="lang-zh-only">偏好技術性工作</span><span class="lang-en-only">Skilled work preferred</span></td>
+            <td><span class="lang-zh-only">非技術性</span><span class="lang-en-only">Unskilled</span></td>
+          </tr>
+          <tr>
+            <td><span class="lang-zh-only">童年管教</span><span class="lang-en-only">Childhood discipline</span></td>
+            <td><span class="lang-zh-only">不一致</span><span class="lang-en-only">Inconsistent</span></td>
+            <td><span class="lang-zh-only">嚴苛</span><span class="lang-en-only">Harsh</span></td>
+          </tr>
+          <tr>
+            <td><span class="lang-zh-only">犯案情緒</span><span class="lang-en-only">Mood during crime</span></td>
+            <td><span class="lang-zh-only">可控</span><span class="lang-en-only">Controlled</span></td>
+            <td><span class="lang-zh-only">焦慮</span><span class="lang-en-only">Anxious</span></td>
+          </tr>
+          <tr>
+            <td><span class="lang-zh-only">同伴狀況</span><span class="lang-en-only">Living situation</span></td>
+            <td><span class="lang-zh-only">與伴侶同住</span><span class="lang-en-only">With partner</span></td>
+            <td><span class="lang-zh-only">獨居</span><span class="lang-en-only">Alone</span></td>
+          </tr>
+          <tr>
+            <td><span class="lang-zh-only">機動性</span><span class="lang-en-only">Mobility</span></td>
+            <td><span class="lang-zh-only">擁有狀況良好車輛，犯案地點較遠</span><span class="lang-en-only">Car in good condition; crimes distant</span></td>
+            <td><span class="lang-zh-only">住／工作於犯案附近</span><span class="lang-en-only">Lives/works near scene</span></td>
+          </tr>
+          <tr>
+            <td><span class="lang-zh-only">事先計畫</span><span class="lang-en-only">Planning</span></td>
+            <td><span class="lang-zh-only">有預謀</span><span class="lang-en-only">Planned</span></td>
+            <td><span class="lang-zh-only">衝動</span><span class="lang-en-only">Spontaneous</span></td>
+          </tr>
+          <tr>
+            <td><span class="lang-zh-only">屍體處置</span><span class="lang-en-only">Body</span></td>
+            <td><span class="lang-zh-only">隱藏；可能運走</span><span class="lang-en-only">Hidden; may transport</span></td>
+            <td><span class="lang-zh-only">留在原地、明顯可見</span><span class="lang-en-only">Left in view at scene</span></td>
+          </tr>
+          <tr>
+            <td><span class="lang-zh-only">武器／證據</span><span class="lang-en-only">Weapon/evidence</span></td>
+            <td><span class="lang-zh-only">不留現場</span><span class="lang-en-only">Absent</span></td>
+            <td><span class="lang-zh-only">常留在現場</span><span class="lang-en-only">Often present</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="lang-zh-only">
+        <h3>4.3 Canter et al. (2004) 的關鍵反證</h3>
+        <p>David Canter 等人從 Christopher Missen 連續殺人犯資料庫蒐集 <strong>100 名美國連續殺人犯的 39 個現場特徵</strong>，做 co-occurrence 分析：</p>
+        <ul>
+          <li>「organized」與「disorganized」的特徵很少同時出現於同一場景。</li>
+          <li>除了極少數共現（如 70% organized 場景藏匿屍體+多現場），大多無法支持二分。</li>
+          <li>結論：<strong>「being organized is typical of serial killers as a whole」</strong> — 多數連續殺人犯都會展現「組織化」特徵，二分法本身缺乏實證基礎。</li>
+        </ul>
+        <p>後續 Snook 等 (2008) 的回顧也未找到支持 O/D 的證據。CCM 1992 版本身已退讓為「<em>continuum</em>」描述，但 John Douglas 個人仍在其網站維持此分類。</p>
+
+        <div class="callout callout-tip">
+          <strong>💡 啟示：</strong>當一個工具在實務上「好用又直覺」，並不代表它在科學上有效。Mixed crime scene 的出現本身就洩漏二分法的問題。
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h3>4.3 Canter et al. (2004) — The Empirical Refutation</h3>
+        <p>From the Christopher Missen archive, Canter and colleagues coded <strong>39 scene aspects across 100 U.S. serial killers</strong>, testing co-occurrence:</p>
+        <ul>
+          <li>"Organized" and "disorganized" features rarely co-occurred within the same scene.</li>
+          <li>Only two co-occurrence patterns reached respectable levels (e.g., body concealed + multiple scenes in 70% of organized cases).</li>
+          <li>Conclusion: <strong>"Being organized is typical of serial killers as a whole"</strong> — most serial killers display organized traits, so the dichotomy lacks empirical grounding.</li>
+        </ul>
+        <p>Snook et al. (2008) found no supporting evidence either. The CCM (1992) itself retreated to a "<em>continuum</em>" description — yet John Douglas reportedly still endorses O/D on his personal site.</p>
+
+        <div class="callout callout-tip">
+          <strong>💡 Lesson:</strong> Practical and intuitive ≠ scientifically valid. The very existence of "mixed crime scenes" betrays the dichotomy's problem.
+        </div>
+      </div>
+    </section>
+
+    <!-- CCM -->
+    <section id="ccm" class="section-card">
+      <div class="lang-zh-only">
+        <h2>5 · Crime Classification Manual (CCM)</h2>
+        <p>Douglas 等於 1992 年出版 <em>Crime Classification Manual: A Standard System for Investigating and Classifying Violent Crimes</em>（2006 再版）。這是 1980 年代以來 FBI 側寫研究的集大成，提供：</p>
+        <ul>
+          <li>各類罪行的定義特徵</li>
+          <li>每類附案例（背景、受害者特徵、現場指標、法醫發現）</li>
+          <li>2006 年新增：電腦犯罪、宗教極端謀殺、年長女性性殺害、跟蹤、兒童綁架</li>
+        </ul>
+
+        <div class="focus-box">
+          <span class="focus-label">FOCUS 2.2</span>
+          <h4>Cult Murder（教派謀殺）案例分析</h4>
+          <p>CCM 定義 cult 為「成員對某些理念、物件或人物展現過度奉獻；其首要目標（如性、權力、金錢）並未為大多數成員所知」 — 即首腦清楚目的，但跟隨者不知情。當兩名以上成員犯下命案，即屬 cult murder。</p>
+          <ul>
+            <li><strong>受害者：</strong>多為教派內部成員或邊緣成員。</li>
+            <li><strong>現場：</strong>可能有象徵性物件；屍體處置看目的 — 若要傳遞訊息則暴露，若要威懾內部則埋藏。</li>
+            <li><strong>案例：</strong>1990 年 Cleveland，Jeffrey Lundgren 領導的激進分裂教派殺害 Avery 一家五口，理由是「淨化獻祭」。Lundgren 於 2006 年被處死。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>5 · Crime Classification Manual (CCM)</h2>
+        <p>Douglas et al. published the <em>CCM: A Standard System for Investigating and Classifying Violent Crimes</em> in 1992 (re-issued 2006). It compiles 1980s-era FBI profiling research and provides:</p>
+        <ul>
+          <li>Defining characteristics of each crime type</li>
+          <li>Case study per type (background, victimology, scene indicators, forensic findings)</li>
+          <li>2006 additions: computer crimes, religious-extremist murder, elder female sexual homicide, stalking, child abductions</li>
+        </ul>
+
+        <div class="focus-box">
+          <span class="focus-label">FOCUS 2.2</span>
+          <h4>Cult Murder — Case Analysis</h4>
+          <p>CCM defines a cult as "a body of adherents with excessive devotion… whose primary objectives of sex, power, and/or money are unknown to the general membership" — leadership knows, followers don't. When two+ members commit murder, it counts as cult murder.</p>
+          <ul>
+            <li><strong>Victims:</strong> usually cult members or peripheral members.</li>
+            <li><strong>Scene:</strong> may contain symbolic items; bodies displayed (to send a message) or buried (to intimidate inner circle).</li>
+            <li><strong>Case:</strong> Cleveland 1990 — Jeffrey Lundgren's radical splinter group killed the Avery family of five as "cleansing sacrifice." Lundgren was executed in 2006.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terminology -->
+    <section id="terminology" class="section-card">
+      <div class="lang-zh-only">
+        <h2>6 · 七個現場分析術語</h2>
+        <p>讀任何側寫文獻或 CCM，你都會反覆看到下列術語。用「一句話 + 例子」記住它們：</p>
+
+        <table class="compare-table">
+          <thead><tr><th>術語</th><th>白話定義 + 例子</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Modus Operandi (MO)</strong></td>
+              <td>「完成犯罪所需的手法」 — 可學習、可改變。連續竊賊找到新工具或破解新警報系統 → 改變 MO。</td>
+            </tr>
+            <tr>
+              <td><strong>Personation</strong></td>
+              <td>「超出完成犯罪所需的行為」 — 通常透露兇手心理需求。</td>
+            </tr>
+            <tr>
+              <td><strong>Signature（簽名）</strong></td>
+              <td>當 personation 出現於連續案件時即是 signature — 跨案重複、儀式性、近乎強迫的行為（如特定屍體擺位、特定符號）。比 MO 更穩定，更利於 linkage analysis。</td>
+            </tr>
+            <tr>
+              <td><strong>Staging（佈置）</strong></td>
+              <td>在警方到場前刻意改動現場。動機：(1) 引開偵查（如把家暴殺人偽裝成入侵竊盜）(2) 保護家屬尊嚴（把自慰窒息死亡擺成意外）。</td>
+            </tr>
+            <tr>
+              <td><strong>Trophy（戰利品）</strong></td>
+              <td>象徵兇手對受害者的勝利／征服 — 例：Jeffrey Dahmer 用福馬林保存身體部位。</td>
+            </tr>
+            <tr>
+              <td><strong>Souvenir（紀念品）</strong></td>
+              <td>讓兇手回憶犯罪愉悅的紀念物 — 例：拿走受害者珠寶。</td>
+            </tr>
+            <tr>
+              <td><strong>Undoing（撫平）</strong></td>
+              <td>兇手「心理上想撤回」犯行的行為 — 把屍體擺進床上、頭枕枕頭、蓋好棉被。通常與受害者有親近關係。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <strong>🔑 心智小結：</strong>MO 看「怎麼做」，Signature 看「為什麼這樣做」，Staging 看「想騙誰看」，Undoing 看「想騙誰心痛」。
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>6 · Seven Scene-Analysis Terms</h2>
+        <p>Any profiling literature or the CCM will repeat these terms. Memorize with one-line + example:</p>
+
+        <table class="compare-table">
+          <thead><tr><th>Term</th><th>Plain Definition + Example</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Modus Operandi (MO)</strong></td>
+              <td>"The method needed to commit the crime" — learnable, changeable. Serial burglar finds a new tool → MO changes.</td>
+            </tr>
+            <tr>
+              <td><strong>Personation</strong></td>
+              <td>"Behavior beyond what is needed to commit the crime" — usually reveals psychological needs.</td>
+            </tr>
+            <tr>
+              <td><strong>Signature</strong></td>
+              <td>Personation that recurs across serial crimes — ritualistic, near-compulsive (specific body posing, symbols). More stable than MO; more useful for linkage analysis.</td>
+            </tr>
+            <tr>
+              <td><strong>Staging</strong></td>
+              <td>Deliberate scene alteration before police arrive. Motives: (1) redirect investigation (e.g., disguising domestic murder as home invasion); (2) protect family dignity (autoerotic asphyxia death made to look accidental).</td>
+            </tr>
+            <tr>
+              <td><strong>Trophy</strong></td>
+              <td>Symbolizes triumph over the victim — Jeffrey Dahmer preserved body parts in formaldehyde.</td>
+            </tr>
+            <tr>
+              <td><strong>Souvenir</strong></td>
+              <td>A keepsake reminding the offender of the crime's pleasure — e.g., the victim's jewelry.</td>
+            </tr>
+            <tr>
+              <td><strong>Undoing</strong></td>
+              <td>Behaviors trying to "undo" the crime psychologically — body placed in bed, head on pillow, covered. Usually a close relationship.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <strong>🔑 Mental Summary:</strong> MO = "how," Signature = "why this way," Staging = "to deceive whom about facts," Undoing = "to soothe whom emotionally."
+        </div>
+      </div>
+    </section>
+
+    <!-- Linkage -->
+    <section id="linkage" class="section-card">
+      <div class="lang-zh-only">
+        <h2>7 · Case Linkage（案件連結分析）</h2>
+        <p>用「跨案的行為相似性」推論「多起案件是同一人所為」。Fortin 案（本章開頭引言）即是 linkage analysis 引發法律爭議的代表。</p>
+
+        <h3>有效連結的兩個必要條件</h3>
+        <div class="bias-diagram">
+          <strong>🧠 Linkage 需要同時成立：</strong>
+          <div class="bias-flow">
+            <div class="bias-step">
+              <strong>跨案一致性</strong><br>
+              同一兇手在不同犯罪中行為穩定<br>
+              <small>(Behavioral Consistency)</small>
+            </div>
+            <div class="bias-arrow">+</div>
+            <div class="bias-step">
+              <strong>跨人區別性</strong><br>
+              該行為要能區分這位兇手與其他兇手<br>
+              <small>(Distinctiveness)</small>
+            </div>
+            <div class="bias-arrow">→</div>
+            <div class="bias-step">
+              <strong>有效連結</strong><br>
+              可以信任的同一兇手推論<br>
+              <small>(Valid Linkage)</small>
+            </div>
+          </div>
+        </div>
+
+        <p>Santtila 等 (2008) 分析義大利 23 名兇手的 116 起命案，發現「同一兇手行為一致、不同兇手間有差異」 — 支持 linkage 的核心假設。但 Bennell 等 (2012) 的綜述指出，「MO 的一致性僅中等」 — 因此 <strong>linkage 主要應靠 signature 而非 MO</strong>。</p>
+
+        <h3>兩種應用方向</h3>
+        <ol>
+          <li><strong>已知一案 → 找出資料庫中相似案件</strong>（探勘未知兇手）</li>
+          <li><strong>已知嫌犯 + 一案 → 找出可能也是他做的其他案件</strong>（搜尋未破案件）</li>
+        </ol>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>7 · Case Linkage</h2>
+        <p>Uses behavioral similarity across crimes to infer "same offender." The Fortin case (chapter epigraph) is a classic legal battleground for linkage analysis.</p>
+
+        <h3>Two Necessary Conditions</h3>
+        <div class="bias-diagram">
+          <strong>🧠 Linkage requires both:</strong>
+          <div class="bias-flow">
+            <div class="bias-step">
+              <strong>Within-Offender Consistency</strong><br>
+              The same offender behaves similarly across crimes
+            </div>
+            <div class="bias-arrow">+</div>
+            <div class="bias-step">
+              <strong>Between-Offender Distinctiveness</strong><br>
+              That behavior distinguishes this offender from others
+            </div>
+            <div class="bias-arrow">→</div>
+            <div class="bias-step">
+              <strong>Valid Linkage</strong><br>
+              Trustworthy inference of common authorship
+            </div>
+          </div>
+        </div>
+
+        <p>Santtila et al. (2008) examined 116 Italian homicides by 23 offenders, confirming within-consistency + between-distinctiveness. But Bennell et al. (2012)'s review shows MO consistency is only moderate — so <strong>linkage should lean on signatures, not MO</strong>.</p>
+
+        <h3>Two Use Cases</h3>
+        <ol>
+          <li><strong>From a known case → search the database for similar ones</strong> (offender unknown).</li>
+          <li><strong>From a suspect + one case → search unsolved cases potentially his</strong>.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Clinical vs Actuarial -->
+    <section id="clinical-actuarial" class="section-card">
+      <div class="lang-zh-only">
+        <h2>8 · Clinical vs Actuarial 兩種取徑</h2>
+
+        <div class="profile-compare">
+          <div class="profile-col predicted">
+            <h5>🩺 Clinical（臨床式）</h5>
+            <ul>
+              <li><span class="match-yes">●</span> 倚重經驗、訓練、直覺、主觀</li>
+              <li><span class="match-yes">●</span> 強調進入兇手心理</li>
+              <li><span class="match-yes">●</span> FBI 主流</li>
+              <li><span class="match-no">×</span> 易受 confirmation bias、自我服務偏誤等影響</li>
+              <li><span class="match-no">×</span> 方法不公開、難以驗證</li>
+            </ul>
+          </div>
+          <div class="profile-col actual">
+            <h5>📊 Actuarial（精算式）</h5>
+            <ul>
+              <li><span class="match-yes">●</span> 倚重統計 base rate、過去類似個案的群體機率</li>
+              <li><span class="match-yes">●</span> Canter 等英國學派</li>
+              <li><span class="match-yes">●</span> 可重現、可實證檢驗</li>
+              <li><span class="match-no">×</span> 較為「乾燥無趣」、缺乏戲劇感</li>
+              <li><span class="match-no">×</span> 仍需要好品質的歷史資料</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-term">Base Rate（基本率）</div>
+          <p style="margin-bottom:0">「某行為在特定群體中、在特定時期（通常一年）內的盛行率。」是 actuarial 的核心。例：保險公司知道「20 歲男大生、學業中等、新運動車」群體 1 年內肇事率 40% → 因此保費較高。</p>
+        </div>
+
+        <p><strong>Harcourt (2007)</strong> 提醒我們：base rate 早已滲透刑事司法 — 從 IRS 稅務稽查、毒品走私側寫、機場與街頭攔查、保釋羈押決定、刑期長度、監獄分級、假釋資格等，「預測工具越來越多地決定個人的法律結果」。</p>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>8 · Clinical vs Actuarial</h2>
+
+        <div class="profile-compare">
+          <div class="profile-col predicted">
+            <h5>🩺 Clinical</h5>
+            <ul>
+              <li><span class="match-yes">●</span> Experience, training, intuition, subjectivity</li>
+              <li><span class="match-yes">●</span> Tries to enter the offender's mind</li>
+              <li><span class="match-yes">●</span> Dominant in the FBI</li>
+              <li><span class="match-no">×</span> Vulnerable to confirmation bias, self-serving bias</li>
+              <li><span class="match-no">×</span> Methods not disclosed, hard to validate</li>
+            </ul>
+          </div>
+          <div class="profile-col actual">
+            <h5>📊 Actuarial</h5>
+            <ul>
+              <li><span class="match-yes">●</span> Statistical base rates, group probabilities from prior cohorts</li>
+              <li><span class="match-yes">●</span> Canter and the U.K. school</li>
+              <li><span class="match-yes">●</span> Reproducible, empirically testable</li>
+              <li><span class="match-no">×</span> "Dry," lacks drama</li>
+              <li><span class="match-no">×</span> Still needs quality historical data</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-term">Base Rate</div>
+          <p style="margin-bottom:0">"Statistical prevalence of a behavior in a given group over a set period (usually one year)." Core to actuarial profiling. Insurance: 20-year-old male college student, mediocre grades, new sports car → ~40% accident rate/year → higher premium.</p>
+        </div>
+
+        <p><strong>Harcourt (2007)</strong> warns: base rates already permeate criminal justice — IRS Discriminant Index, drug-courier and racial profiles, airport/highway/street stops, pretrial detention, sentence length, prison classification, parole eligibility. "Prediction instruments increasingly determine individual outcomes in our policing, law enforcement, and punishment practices."</p>
+      </div>
+    </section>
+
+    <!-- Accuracy & Usefulness -->
+    <section id="accuracy" class="section-card">
+      <div class="lang-zh-only">
+        <h2>9 · Profile 的準確度與實用性</h2>
+        <p>Gekoski &amp; Gray (2011) 強調：「<strong>準確 ≠ 有用</strong>」。一份「事後看是準的」profile 也可能毫無實用價值 — 因為警方早就靠例行偵查得出相同結論。</p>
+
+        <h3>9.1 三個經典研究結論一覽</h3>
+        <table class="compare-table">
+          <thead><tr><th>研究</th><th>樣本</th><th>主要結論</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Pinizzotto &amp; Finkel (1990)</strong></td>
+              <td>28 人：4 FBI 專家、6 受訓偵探、6 未受訓偵探、6 臨床心理師、6 大學生</td>
+              <td>受訓 profilers 在性犯罪案略佔優勢，但命案無明顯優勢；專家處理資訊方式與非專家無顯著差異。<strong>建議：團隊比單人更有效。</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Copson (1995)</strong></td>
+              <td>184 件英國案件、29 名 profiler</td>
+              <td>協助破案僅 14.1%；指認嫌犯僅 2.7%；但 61% 「對了解兇手有幫助」、82.6% 偵探覺得「某種程度上有用」。Profiler 的<strong>聲望</strong>是影響感受的主因。</td>
+            </tr>
+            <tr>
+              <td><strong>Snook et al. (2007) meta-analysis</strong></td>
+              <td>多項實證研究彙整</td>
+              <td>Profilers 並未明顯優於其他組；稱 profiling 為「<strong>pseudoscientific technique</strong>」直到能在大規模活躍 profiler 樣本中通過經驗檢證。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-warn">
+          <strong>🧬 DNA 會取代 profiling 嗎？(Focus 2.3)</strong><br>
+          隨著 CODIS、AFIS、NIBIN 等資料庫成熟，DNA 偵測量遠超實驗室處理能力。Gekoski &amp; Gray (2011) 推測未來 DNA 可能讓 profiling「過時」。但心理學處理的是「機率」而非「確定性」 — 在無 DNA 的案件、或需要理解動機與下一步行為時，behavioral profiling 仍有價值。
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>9 · Accuracy vs Usefulness</h2>
+        <p>Gekoski &amp; Gray (2011) emphasize: <strong>accurate ≠ useful</strong>. A post-hoc "accurate" profile may add nothing — police might have reached the same conclusion via routine work.</p>
+
+        <h3>9.1 Three Classic Studies</h3>
+        <table class="compare-table">
+          <thead><tr><th>Study</th><th>Sample</th><th>Main Finding</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Pinizzotto &amp; Finkel (1990)</strong></td>
+              <td>28 people: 4 FBI experts, 6 trained detectives, 6 untrained, 6 clinical psychologists, 6 students</td>
+              <td>Trained profilers slightly better on sex offense; no advantage on homicide; experts did not process info differently. <strong>Recommends team-based profiling.</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Copson (1995)</strong></td>
+              <td>184 U.K. cases, 29 profilers</td>
+              <td>Helped solve only 14.1%; identified the offender in only 2.7%; yet 61% helped "understand the offender" and 82.6% of detectives felt "somewhat useful." Profiler reputation drove perceived usefulness.</td>
+            </tr>
+            <tr>
+              <td><strong>Snook et al. (2007) meta-analysis</strong></td>
+              <td>Pooled empirical studies</td>
+              <td>Profilers do not decisively outperform other groups; call profiling a "<strong>pseudoscientific technique</strong>" until empirically validated on large samples of active profilers.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-warn">
+          <strong>🧬 Will DNA Make Profiling Obsolete? (Focus 2.3)</strong><br>
+          With CODIS, AFIS, and NIBIN databases, DNA demand outstrips lab capacity. Gekoski &amp; Gray (2011) speculate DNA may eventually displace profiling. But psychology trades in probabilities, not certainties — for cases without DNA, or when investigators need to understand motive and next moves, behavioral profiling retains value.
+        </div>
+      </div>
+    </section>
+
+    <!-- Biases -->
+    <section id="biases" class="section-card">
+      <div class="lang-zh-only">
+        <h2>10 · 三大認知陷阱 — 為什麼 profiler 常常失準？</h2>
+        <p>Herbert Simon (1957) 的 <strong>Bounded Rationality（有限理性）</strong>提醒我們：每個人都建構自己的「簡化心智模型」並在其中運作。Profiler 無法真正進入兇手的心 — 他只能用自己的模型去模擬。Heuer (1999) 將此推到情報分析領域，並列出三個關鍵陷阱：</p>
+      </div>
+      <div class="lang-en-only">
+        <h2>10 · The Three Cognitive Pitfalls</h2>
+        <p>Herbert Simon's (1957) <strong>Bounded Rationality</strong>: each of us constructs a simplified mental model and operates within it. A profiler can't really enter the offender's mind — they only simulate it via their own model. Heuer (1999) extended this to intelligence analysis and named three key pitfalls:</p>
+      </div>
+
+      <div class="area-grid" style="grid-template-columns: 1fr">
+        <article class="area-card area-1">
+          <div class="area-icon">A</div>
+          <div class="lang-zh-only">
+            <h4>Confirmation Bias（確認偏誤）</h4>
+            <p>「只看支持自己預設的證據，忽略反證。」Profiler 與偵查員都會在曖昧的 profile 中挑出符合自己假設的部分。Copson (1995) 發現 50% 以上 profile 被認為「有用」其實是因為「強化了警方原本的看法」。</p>
+            <p><strong>加劇條件 (Ask &amp; Granhag, 2005)：</strong>偵辦時間壓力 + 強調決斷力的警察文化 + 重大決策牽涉聲譽。</p>
+          </div>
+          <div class="lang-en-only">
+            <h4>Confirmation Bias</h4>
+            <p>"Cherry-picking evidence that confirms prior beliefs while ignoring contradictions." Both profilers and detectives selectively read ambiguous profiles to match their hunches. Copson (1995) found 50%+ of profiles deemed "useful" simply reinforced officers' beliefs.</p>
+            <p><strong>Aggravating conditions (Ask &amp; Granhag, 2005):</strong> time pressure + decisive police culture + decisions tied to reputation.</p>
+          </div>
+        </article>
+
+        <article class="area-card area-3">
+          <div class="area-icon">B</div>
+          <div class="lang-zh-only">
+            <h4>Self-Serving Bias（自利偏誤）</h4>
+            <p>「成功歸己、失敗歸境」 — 以維持高自尊與專業形象。Brussel 在 Mad Bomber、Boston Strangler 案的回憶錄即為經典 — 他堅稱只「犯一個錯」（預測未婚實為已婚），卻略過大量未提的錯誤預測。</p>
+            <p>這也是為何 profiling 領域充滿勝利敘事的回憶錄 — 出版誘因+自利偏誤=只記得對的。</p>
+          </div>
+          <div class="lang-en-only">
+            <h4>Self-Serving Bias</h4>
+            <p>"Credit success to self, blame failure on circumstance" — to maintain self-esteem and professional standing. Brussel's memoirs on the Mad Bomber and Boston Strangler are the textbook case — claiming "only one mistake" (predicting unmarried when he was married) while ignoring many other misses.</p>
+            <p>It also explains why profiling literature is full of triumph memoirs — publishing incentives + self-serving bias = only the hits get remembered.</p>
+          </div>
+        </article>
+
+        <article class="area-card area-4">
+          <div class="area-icon">C</div>
+          <div class="lang-zh-only">
+            <h4>Fundamental Attribution Error（基本歸因謬誤）</h4>
+            <p>「高估人格(內在)、低估情境(外在)。」FBI 傳統 profiling 假設「現場行為穩定反映人格」 — 完全是 FAE 的展現。</p>
+            <p>但事實上，受害者反應、武器、場地結構等外部變項都會劇烈影響兇手在那個當下的行為。Mischel &amp; Peake (1982) 早已指出：人類行為跨情境的不一致性比想像中大。</p>
+            <p><strong>反例：</strong>Douglas &amp; Olshaker 引用的「Homicidal Triad（殺人三聯徵）」 — 尿床、虐待動物、縱火 — 並未被實證支持，僅「虐待動物」與後續暴力有部分相關。這是 FAE 把「相關」當成「因果」的代表。</p>
+          </div>
+          <div class="lang-en-only">
+            <h4>Fundamental Attribution Error</h4>
+            <p>"Overweight personality (internal); underweight situation (external)." Classic FBI profiling assumes "scene behavior stably reflects personality" — pure FAE.</p>
+            <p>Yet victim reaction, weapon availability, scene layout heavily shape what an offender does in the moment. Mischel &amp; Peake (1982) showed long ago that cross-situational consistency is weaker than assumed.</p>
+            <p><strong>Cautionary example:</strong> Douglas &amp; Olshaker's "Homicidal Triad" (bedwetting, cruelty to animals, firesetting) is not empirically supported; only "cruelty to animals" weakly predicts later violence. A textbook case of FAE mistaking correlation for causation.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Glossary -->
+    <section id="glossary" class="section-card">
+      <div class="lang-zh-only">
+        <h2>11 · 關鍵詞彙速查</h2>
+        <table class="compare-table">
+          <thead><tr><th>詞彙</th><th>一句話定義</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Actuarial method</strong></td><td>用統計群體機率（base rate）作為側寫核心。</td></tr>
+            <tr><td><strong>Base rate</strong></td><td>某行為在特定群體 / 期間內的盛行率。</td></tr>
+            <tr><td><strong>BAU</strong></td><td>FBI 行為分析單位，NCAVC 下三組 + ViCAP。</td></tr>
+            <tr><td><strong>BSU</strong></td><td>1972 年成立的 FBI 行為科學組，主責訓練。</td></tr>
+            <tr><td><strong>Belief perseverance</strong></td><td>即使證據被駁，仍堅守原有信念的傾向。</td></tr>
+            <tr><td><strong>Case linkage</strong></td><td>用跨案的行為相似性推論「同一兇手」。</td></tr>
+            <tr><td><strong>CARD / CART</strong></td><td>聯邦 / 州 的兒童綁架快速反應隊。</td></tr>
+            <tr><td><strong>Clinical method</strong></td><td>倚重經驗、訓練、直覺與主觀的側寫方式。</td></tr>
+            <tr><td><strong>Confirmation bias</strong></td><td>偏向收集支持自己預設的證據、忽略反證。</td></tr>
+            <tr><td><strong>Deductive analysis</strong></td><td>從已知具體案件推論：FBI 傳統的取徑。</td></tr>
+            <tr><td><strong>Disorganized asocial offender</strong></td><td>缺乏狡猾、反社會、現場混亂、住附近。</td></tr>
+            <tr><td><strong>Fundamental attribution error</strong></td><td>高估人格、低估情境的歸因偏誤。</td></tr>
+            <tr><td><strong>Inductive analysis</strong></td><td>從「典型兇手」的統計平均推論：英式 actuarial。</td></tr>
+            <tr><td><strong>ICIAF</strong></td><td>國際犯罪偵查分析學會，全球唯一認證 profiler 機構。</td></tr>
+            <tr><td><strong>Linkage analysis</strong></td><td>= case linkage。</td></tr>
+            <tr><td><strong>Mixed crime scene</strong></td><td>同時有 organized 與 disorganized 特徵。</td></tr>
+            <tr><td><strong>Modus operandi (MO)</strong></td><td>完成犯罪的手法，會隨經驗變動。</td></tr>
+            <tr><td><strong>NCAVC</strong></td><td>1984 年成立的國家暴力犯罪分析中心。</td></tr>
+            <tr><td><strong>Organized nonsocial offender</strong></td><td>有條理、狡猾、親和、犯案地點離家遠。</td></tr>
+            <tr><td><strong>Personation</strong></td><td>超出完成犯罪所需的行為。</td></tr>
+            <tr><td><strong>Self-serving bias</strong></td><td>成功歸己、失敗歸境的傾向。</td></tr>
+            <tr><td><strong>Signature</strong></td><td>跨案重複的 personation，反映心理需求。</td></tr>
+            <tr><td><strong>Souvenir</strong></td><td>用以回憶犯罪愉悅的紀念物。</td></tr>
+            <tr><td><strong>Staging</strong></td><td>警方到場前刻意改動現場。</td></tr>
+            <tr><td><strong>Trophy</strong></td><td>象徵兇手戰勝受害者的物品。</td></tr>
+            <tr><td><strong>Typology</strong></td><td>把人格／行為模式分類的系統。</td></tr>
+            <tr><td><strong>Undoing</strong></td><td>兇手「心理上撤回」犯行的行為。</td></tr>
+            <tr><td><strong>ViCAP</strong></td><td>FBI 暴力犯罪逮捕計畫，跨轄區資料庫。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>11 · Key Concepts Glossary</h2>
+        <table class="compare-table">
+          <thead><tr><th>Term</th><th>One-Line Definition</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Actuarial method</strong></td><td>Profiling anchored in statistical group probabilities (base rates).</td></tr>
+            <tr><td><strong>Base rate</strong></td><td>Prevalence of a behavior in a specific group/period.</td></tr>
+            <tr><td><strong>BAU</strong></td><td>FBI Behavioral Analysis Unit (3 units + ViCAP under NCAVC).</td></tr>
+            <tr><td><strong>BSU</strong></td><td>The 1972 Behavioral Science Unit; focused on training.</td></tr>
+            <tr><td><strong>Belief perseverance</strong></td><td>Sticking to beliefs even when evidence is refuted.</td></tr>
+            <tr><td><strong>Case linkage</strong></td><td>Inferring same offender from cross-case behavioral similarity.</td></tr>
+            <tr><td><strong>CARD / CART</strong></td><td>Federal / state child-abduction rapid response teams.</td></tr>
+            <tr><td><strong>Clinical method</strong></td><td>Experience, training, intuition, subjectivity-based profiling.</td></tr>
+            <tr><td><strong>Confirmation bias</strong></td><td>Favoring confirming evidence, dismissing the contradictory.</td></tr>
+            <tr><td><strong>Deductive analysis</strong></td><td>Reasoning from known specific cases; FBI's traditional approach.</td></tr>
+            <tr><td><strong>Disorganized asocial offender</strong></td><td>Uncunning, antisocial, messy scene, lives nearby.</td></tr>
+            <tr><td><strong>Fundamental attribution error</strong></td><td>Overweighting personality, underweighting situation.</td></tr>
+            <tr><td><strong>Inductive analysis</strong></td><td>Reasoning from statistical averages of "typical" offenders; U.K. actuarial.</td></tr>
+            <tr><td><strong>ICIAF</strong></td><td>The world's only profiler certification body.</td></tr>
+            <tr><td><strong>Linkage analysis</strong></td><td>= case linkage.</td></tr>
+            <tr><td><strong>Mixed crime scene</strong></td><td>Features of both organized and disorganized.</td></tr>
+            <tr><td><strong>Modus operandi (MO)</strong></td><td>The method needed to commit a crime; changes with experience.</td></tr>
+            <tr><td><strong>NCAVC</strong></td><td>1984 National Center for the Analysis of Violent Crime.</td></tr>
+            <tr><td><strong>Organized nonsocial offender</strong></td><td>Methodical, cunning, amiable, crimes far from home.</td></tr>
+            <tr><td><strong>Personation</strong></td><td>Behavior beyond what is needed to commit the crime.</td></tr>
+            <tr><td><strong>Self-serving bias</strong></td><td>Credit success to self, blame failure on circumstance.</td></tr>
+            <tr><td><strong>Signature</strong></td><td>Personation recurring across crimes; reflects psychological needs.</td></tr>
+            <tr><td><strong>Souvenir</strong></td><td>Keepsake to relive the crime's pleasure.</td></tr>
+            <tr><td><strong>Staging</strong></td><td>Deliberate scene alteration before police arrive.</td></tr>
+            <tr><td><strong>Trophy</strong></td><td>Item symbolizing triumph over the victim.</td></tr>
+            <tr><td><strong>Typology</strong></td><td>System for classifying personality/behavioral patterns.</td></tr>
+            <tr><td><strong>Undoing</strong></td><td>Behavior trying to psychologically undo the crime.</td></tr>
+            <tr><td><strong>ViCAP</strong></td><td>FBI Violent Criminal Apprehension Program; cross-jurisdiction database.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Summary -->
+    <section id="summary" class="section-card">
+      <div class="lang-zh-only">
+        <h2>12 · 本章總結</h2>
+        <ol>
+          <li>美國 crime scene profiling 始於 Hoover 過世後 1972 年的 BSU；1984 年 NCAVC 成立後組織化為 BAU 三組 + ViCAP。</li>
+          <li>1980 年兩篇開創論文（Ault &amp; Reese；Hazelwood &amp; Douglas）把 profiling 帶進主流，並奠定了 O/D 二分法。</li>
+          <li>Douglas–Ressler 36 人監獄訪談的「便利樣本」性質決定了其推論的脆弱性；Canter 等 (2004) 的 100 人研究即推翻了 O/D 的統計基礎。</li>
+          <li>七個關鍵術語（MO、Signature、Personation、Staging、Trophy、Souvenir、Undoing）是讀任何 profile 報告的入場券。</li>
+          <li>Case linkage 必須同時滿足「跨案一致 + 跨人區別」 — signature 比 MO 更可靠。</li>
+          <li>Clinical 與 actuarial 兩種取徑各有優缺；FBI 主導 clinical，Canter 主導 actuarial。</li>
+          <li>三大實證研究（Pinizzotto &amp; Finkel 1990、Copson 1995、Snook 2007 meta-analysis）告訴我們：profilers 的直接破案率極低、實用性主要來自「強化偵查員直覺」、整體仍接近 pseudoscience。</li>
+          <li>三大認知陷阱（confirmation bias、self-serving bias、fundamental attribution error）是 profiler 失準的根源。</li>
+        </ol>
+        <div class="callout callout-tip"><strong>🎯 一句話帶走：</strong>「Profiling 比警察工作多了一層心理視角，但也多了一層認知陷阱。」</div>
+      </div>
+      <div class="lang-en-only">
+        <h2>12 · Chapter Summary</h2>
+        <ol>
+          <li>U.S. crime scene profiling started with the BSU in 1972 post-Hoover; the 1984 NCAVC organized it into BAU's three units + ViCAP.</li>
+          <li>The 1980 papers (Ault &amp; Reese; Hazelwood &amp; Douglas) mainstreamed profiling and seeded the O/D dichotomy.</li>
+          <li>The Douglas–Ressler 36-inmate "convenience sample" set the stage; Canter et al. (2004) on 100 killers refuted O/D's statistical basis.</li>
+          <li>Seven scene-analysis terms (MO, Signature, Personation, Staging, Trophy, Souvenir, Undoing) are your admission ticket to any profile report.</li>
+          <li>Case linkage requires both within-offender consistency AND between-offender distinctiveness — signature beats MO.</li>
+          <li>Clinical (FBI) vs actuarial (Canter) each have trade-offs.</li>
+          <li>Three empirical landmarks (Pinizzotto &amp; Finkel 1990; Copson 1995; Snook 2007 meta-analysis): profilers' direct solve rate is low, "usefulness" mostly reinforces detective hunches, the field remains near-pseudoscience.</li>
+          <li>Three cognitive pitfalls (confirmation, self-serving, FAE) underlie why profilers miss the mark.</li>
+        </ol>
+        <div class="callout callout-tip"><strong>🎯 One-liner takeaway:</strong> "Profiling adds a psychological lens to police work — and one more layer of cognitive traps."</div>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz" class="section-card quiz-container" style="padding:1.25rem">
+      <!-- Rendered by quiz.js -->
+    </section>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="copyright">© 2026 葉欲禾 (Gary Yu-Ho YEH) — All Rights Reserved 版權所有</p>
+    <p>
+      <span class="lang-zh-only">本互動教材改編自 Bartol, C. R., &amp; Bartol, A. M. (2013). <em>Criminal &amp; Behavioral Profiling</em>. SAGE Publications。內容僅供本人線上教學使用。</span>
+      <span class="lang-en-only">Adapted for instructional use from Bartol, C. R., &amp; Bartol, A. M. (2013). <em>Criminal &amp; Behavioral Profiling</em>. SAGE Publications. For non-commercial classroom use only.</span>
+    </p>
+    <p><a href="../index.html"><span class="lang-zh-only">← 回到目錄首頁</span><span class="lang-en-only">← Back to Table of Contents</span></a></p>
+  </div>
+</footer>
+
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/data/chapter2-quiz.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector("#quiz");
+    if (container && window.CBP && window.CBP.QuizBank && window.CBP.QuizBank.chapter2) {
+      new window.CBP.Quiz({
+        container,
+        bank: window.CBP.QuizBank.chapter2.questions,
+        count: 10,
+        onSubmit: (payload) => { console.log("[Ch2 Quiz Result]", payload); },
+      });
+    }
+  });
+</script>
+</body>
+</html>

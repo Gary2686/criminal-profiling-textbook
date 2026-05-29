@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 3：科學取徑的犯罪現場側寫 — Criminal & Behavioral Profiling 互動教材</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="lang-zh">
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title"><span>🔍</span>
+      <span class="lang-zh-only">犯罪與行為側寫 · 互動教材</span>
+      <span class="lang-en-only">Criminal & Behavioral Profiling · Interactive</span></a>
+    <div class="lang-toggle"><button data-lang="zh" class="active">中文</button><button data-lang="en">English</button></div>
+  </div>
+</header>
+
+<section class="chapter-hero">
+  <div class="container">
+    <div class="lang-zh-only">
+      <p style="opacity:.85;letter-spacing:.3em;margin-bottom:.5rem">CHAPTER 3</p>
+      <h1>科學取徑的犯罪現場側寫</h1>
+      <p class="subtitle">從 Popper 的可否證性到 Canter 的 A→C 方程式：把 profiling 從「藝術」推向「科學」需要哪些工具與紀律？認識 investigative psychology、psychological signatures、Moffitt 發展路徑與 Kahneman 捷思偏誤。</p>
+    </div>
+    <div class="lang-en-only">
+      <p style="opacity:.85;letter-spacing:.3em;margin-bottom:.5rem">CHAPTER 3</p>
+      <h1>Scientific Approaches to Crime Scene Profiling</h1>
+      <p class="subtitle">From Popper's falsifiability to Canter's A→C equation — what tools and discipline turn profiling from art into science? Meet investigative psychology, psychological signatures, Moffitt's developmental pathways, and Kahneman's heuristic biases.</p>
+    </div>
+  </div>
+</section>
+
+<div class="chapter-layout">
+  <aside><nav class="chapter-toc">
+    <div class="lang-zh-only"><h4>本章目錄</h4></div>
+    <div class="lang-en-only"><h4>Table of Contents</h4></div>
+    <ol>
+      <li><a href="#misconceptions"><span class="lang-zh-only">三大誤解</span><span class="lang-en-only">3 Misconceptions</span></a></li>
+      <li><a href="#peirce"><span class="lang-zh-only">Peirce 四種知識</span><span class="lang-en-only">Peirce's 4 Ways of Knowing</span></a></li>
+      <li><a href="#popper"><span class="lang-zh-only">Popper 可否證性</span><span class="lang-en-only">Popper's Falsifiability</span></a></li>
+      <li><a href="#canter"><span class="lang-zh-only">Canter 與 Railway Rapist 案</span><span class="lang-en-only">Canter & the Railway Rapist</span></a></li>
+      <li><a href="#stagg"><span class="lang-zh-only">Stagg 冤案教訓</span><span class="lang-en-only">The Stagg Cautionary Tale</span></a></li>
+      <li><a href="#questions"><span class="lang-zh-only">Canter 四問題</span><span class="lang-en-only">Canter's 4 Questions</span></a></li>
+      <li><a href="#ac"><span class="lang-zh-only">A→C 方程式</span><span class="lang-en-only">A→C Equation</span></a></li>
+      <li><a href="#signatures"><span class="lang-zh-only">心理簽名</span><span class="lang-en-only">Psychological Signatures</span></a></li>
+      <li><a href="#theories"><span class="lang-zh-only">當代犯罪學理論</span><span class="lang-en-only">Contemporary Theories</span></a></li>
+      <li><a href="#errors"><span class="lang-zh-only">科學側寫的錯誤源</span><span class="lang-en-only">Error Sources</span></a></li>
+      <li><a href="#glossary"><span class="lang-zh-only">關鍵詞彙</span><span class="lang-en-only">Glossary</span></a></li>
+      <li><a href="#summary"><span class="lang-zh-only">總結</span><span class="lang-en-only">Summary</span></a></li>
+      <li><a href="#quiz"><span class="lang-zh-only">自我評量</span><span class="lang-en-only">Quiz</span></a></li>
+    </ol>
+  </nav></aside>
+
+  <main>
+
+    <section id="misconceptions" class="section-card">
+      <div class="lang-zh-only">
+        <h2>1 · Rainbow &amp; Gregory 三大常見誤解</h2>
+        <table class="compare-table">
+          <thead><tr><th>誤解</th><th>真相</th></tr></thead>
+          <tbody>
+            <tr><td>Profiler 會預測兇手「人格」</td><td>人格預測的可信度低，且對警方而言常無用；應聚焦「行為指標」（如是否從事戶外活動）。</td></tr>
+            <tr><td>Profiler 的工作是「破案」</td><td>Profiler 應以行為科學<strong>輔助</strong>偵查與決策；自我吹噓的回憶錄是錯覺來源。</td></tr>
+            <tr><td>Profiling 已是成熟科學</td><td>Kocsis (2009)、Snook 等 (2008) 強調：profiling 仍在早期發展，未獲科學地位。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="lang-en-only">
+        <h2>1 · Three Common Misconceptions (Rainbow &amp; Gregory, 2011)</h2>
+        <table class="compare-table">
+          <thead><tr><th>Misconception</th><th>Reality</th></tr></thead>
+          <tbody>
+            <tr><td>Profilers predict offender personality</td><td>Personality prediction has weak validity and is rarely helpful — focus on behavioral indicators.</td></tr>
+            <tr><td>Profilers solve crimes</td><td>Profilers <strong>support</strong> investigation via behavioral science; self-promoting memoirs distort this.</td></tr>
+            <tr><td>Profiling is established science</td><td>Kocsis (2009), Snook et al. (2008): profiling remains in early development, lacking scientific status.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="peirce" class="section-card">
+      <div class="lang-zh-only">
+        <h2>2 · Peirce 的「四種取得知識的方式」</h2>
+        <p>美國哲學家 Charles Peirce 把人類獲得知識的方式分為四種。理解這四種，才能診斷自己的 profile 報告是「哪一種知識」：</p>
+      </div>
+      <div class="lang-en-only">
+        <h2>2 · Peirce's Four Ways of Acquiring Knowledge</h2>
+        <p>The American philosopher Peirce identified four ways. Understanding them helps diagnose what kind of knowledge a profile report contains:</p>
+      </div>
+
+      <div class="area-grid">
+        <article class="area-card area-1"><div class="area-icon">①</div>
+          <div class="lang-zh-only"><h4>Tenacity 固執法</h4><p>「我一直都這樣相信」 — 不管證據怎麼說。<strong>這正是 belief persistence 的根</strong>，是四種裡最不可靠的。</p></div>
+          <div class="lang-en-only"><h4>Tenacity</h4><p>"I've always believed this" — regardless of evidence. The root of <strong>belief persistence</strong>; the least reliable of the four.</p></div>
+        </article>
+        <article class="area-card area-2"><div class="area-icon">②</div>
+          <div class="lang-zh-only"><h4>Authority 權威法</h4><p>「老師說」「FBI 說」「書上說」 — 高效但需被檢驗。法庭上的 expert testimony 也是這一類。</p></div>
+          <div class="lang-en-only"><h4>Authority</h4><p>"My teacher said," "FBI says," "the book says" — efficient but needs scrutiny. Courtroom expert testimony falls here.</p></div>
+        </article>
+        <article class="area-card area-3"><div class="area-icon">③</div>
+          <div class="lang-zh-only"><h4>A priori 先驗法</h4><p>「理性與邏輯演繹推出」 — 哲學與法律的基底。「常識（common sense）」也屬此 — 仰賴日常經驗。</p></div>
+          <div class="lang-en-only"><h4>A priori</h4><p>"It stands to reason and logical deduction" — the basis of philosophy and law. "Common sense" lives here.</p></div>
+        </article>
+        <article class="area-card area-4"><div class="area-icon">④</div>
+          <div class="lang-zh-only"><h4>Science 科學法</h4><p>系統性檢驗、實證、可修正、可推翻 — 「沒有絕對，只有機率」。Profiling 必須朝向這一種。</p></div>
+          <div class="lang-en-only"><h4>Science</h4><p>Systematic testing, empirical, revisable, refutable — "no certainties, only probabilities." Profiling must move this way.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="popper" class="section-card">
+      <div class="lang-zh-only">
+        <h2>3 · Popper 的「可否證性（Falsifiability）」</h2>
+        <div class="concept-card">
+          <div class="concept-term">Falsifiability — 可否證性</div>
+          <p style="margin-bottom:0">Popper：「一個陳述是科學的，前提是 — 它<strong>有可能</strong>被經驗推翻。」<br><em>「所有天鵝都是白的」</em>無論你看過幾百萬隻白天鵝都不能證明它正確；但看到一隻黑天鵝就能否證它。</p>
+        </div>
+        <p><strong>Profile 報告中的常見「不可否證」陳述：</strong></p>
+        <blockquote>「縱火是性興奮的替代，火焰的毀滅力反映了 pyromaniac 的性慾強度與虐待傾向。」<br>— Abrahamsen (1960)</blockquote>
+        <p>這句話<strong>既不能被驗證也不能被否證</strong>，更無助於偵查 — 它違反 Popper 的科學標準。然而類似的精神分析式陳述至今仍出現於某些 profile 報告中。</p>
+
+        <div class="callout">
+          <strong>📝 過去被 profiler 提出且後來被科學否證的「事實聲明」：</strong>
+          <ul style="margin-bottom:0">
+            <li>「所有連續殺人犯都是白人」 — 假</li>
+            <li>「美國以外幾乎沒有連續殺人犯」 — 假，全球證據累積中</li>
+            <li>「大規模殺人犯幾乎都是精神病患」 — 假，多數臨床上並未達到診斷標準</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>3 · Popper's Falsifiability</h2>
+        <div class="concept-card">
+          <div class="concept-term">Falsifiability</div>
+          <p style="margin-bottom:0">Popper: "A statement is scientific only if it <strong>could in principle</strong> be refuted by experience."<br><em>"All swans are white"</em> can't be confirmed by any number of white swans — but one black swan refutes it.</p>
+        </div>
+        <p><strong>Common "unfalsifiable" profile claims:</strong></p>
+        <blockquote>"Firesetting is a substitute for a sexual thrill, and the devastating and destructive powers of fire reflect the intensity of the pyromaniac's sexual desires, as well as his sadism."<br>— Abrahamsen (1960)</blockquote>
+        <p>This sentence is <strong>neither verifiable nor falsifiable</strong>, and is useless to investigators — violating Popper's standard. Yet psychoanalytic claims like this still appear in some profile reports today.</p>
+
+        <div class="callout">
+          <strong>📝 Past profiler claims since falsified by evidence:</strong>
+          <ul style="margin-bottom:0">
+            <li>"All serial killers are white" — false</li>
+            <li>"Serial killing barely happens outside the U.S." — false, global evidence accumulating</li>
+            <li>"Mass murderers are almost always insane" — false, most don't meet clinical criteria</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="canter" class="section-card">
+      <div class="lang-zh-only">
+        <h2>4 · Canter 與 The Railway Rapist</h2>
+        <p>1980 年代中期，倫敦及周邊鐵路站發生連續強姦案。1986 年 12 月首起命案（19 歲女性被綁離 Hackney Wick 站、強姦後勒斃），警方啟動英國自 Yorkshire Ripper 以來最大規模調查。Scotland Yard 邀請社會 / 環境心理學家 David Canter 介入。</p>
+
+        <div class="focus-box">
+          <span class="focus-label">FOCUS 3.1</span>
+          <h4>John Duffy 與 David Mulcahy 雙人組</h4>
+          <ul>
+            <li>Duffy 自始即列嫌但被淹沒於 2,000+ 嫌犯中。</li>
+            <li>關鍵線索：小腳印（只占英國成人男性 1%）、體型相符、髮色、痘疤、連帽衫與 balaclava 頭套。</li>
+            <li>Duffy 持刀強暴前妻是「把他從嫌犯名單中分離出來」的關鍵 — 但當時警員「假設家暴者不會去殺陌生人」。</li>
+            <li>1987 年逮捕，1988 年判 6 個無期徒刑；1997 年才在獄中向 Cutler 醫師承認還犯下 20+ 起未被起訴的性侵。</li>
+            <li>2000 年同夥 David Mulcahy 被判 15 罪 — 兩人少年時即一起虐待動物、玩氣槍打傷 4 人。</li>
+          </ul>
+        </div>
+
+        <p>Canter 寫了 17 項人格與行為特徵 + 環境線索。<strong>該 profile 沒有直接破案，但成功指出 Duffy 居住的 Kilburn 區。</strong>更重要的：這個經驗讓 Canter 創立 <span class="vocab-block">investigative psychology</span> 學科。</p>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>4 · Canter and the Railway Rapist</h2>
+        <p>From the mid-1980s, women were attacked at railway stations in/around London. In December 1986, the first killing — a 19-year-old dragged from Hackney Wick Station, raped, strangled — triggered the largest U.K. investigation since the Yorkshire Ripper. Scotland Yard called in social/environmental psychologist David Canter.</p>
+
+        <div class="focus-box">
+          <span class="focus-label">FOCUS 3.1</span>
+          <h4>John Duffy &amp; David Mulcahy</h4>
+          <ul>
+            <li>Duffy was a suspect from the start but lost among 2,000+.</li>
+            <li>Key clues: a small footprint (1% of UK adult males), build, hair color, acne, hooded sweatshirt, balaclava.</li>
+            <li>Knife-raping his ex-wife separated him from the pack — but officers had assumed a "domestic abuser" wouldn't kill a stranger.</li>
+            <li>Arrested 1987, convicted 1988 (6 life sentences); confessed to 20+ additional rapes to Dr. Cutler in prison in 1997.</li>
+            <li>Accomplice David Mulcahy convicted on 15 counts in 2000 — both had tortured animals and shot 4 people with air rifles as teens.</li>
+          </ul>
+        </div>
+
+        <p>Canter wrote a 17-trait profile + environmental cues. <strong>It didn't directly solve the case but correctly pinpointed Duffy's Kilburn neighborhood.</strong> Crucially: the experience led Canter to found <span class="vocab-block">investigative psychology</span>.</p>
+      </div>
+    </section>
+
+    <section id="stagg" class="section-card">
+      <div class="lang-zh-only">
+        <h2>5 · Paul Britton 與 Stagg 冤案的教訓</h2>
+        <p>1992 年 Rachel Nickell 在 Wimbledon Common 推著 2 歲兒子散步時被刺死。心理學家 Paul Britton 採取「臨床／直覺」路線，告訴警方兇手「住附近、單身、對色情有興趣、有輕罪前科」 — 警方鎖定 Colin Stagg。</p>
+        <p>Britton 主動提議「honeytrap」：女警偽裝感興趣，逐步引誘 Stagg 自首。歷時數週，Stagg 從未自首。卻仍被羈押超過 1 年；最終獲釋並被警方道歉，真兇 Robert Napper 多年後才被起訴。</p>
+        <div class="callout callout-warn">
+          <strong>⚖️ 法律連鎖反應：</strong>
+          <ul style="margin-bottom:0">
+            <li>2001 年英國 ACPO 把「offender profiler」改名為 <strong>Behavioural Investigative Analyst（BIA）</strong>，並要求 ACPO 認證。</li>
+            <li>第 9 章將回到本案討論可採性問題（Regina v. Stagg, 1994）。</li>
+            <li>Britton 一案後聲望大跌；profession 的科學化呼聲加大。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>5 · The Stagg Cautionary Tale (Paul Britton)</h2>
+        <p>In 1992, Rachel Nickell was stabbed dead on Wimbledon Common while walking with her 2-year-old. Psychologist Paul Britton's clinical/intuitive profile pointed to "single male, nearby, into pornography, prior minor offense" — police zeroed in on Colin Stagg.</p>
+        <p>Britton orchestrated a "honeytrap" — a female officer feigning interest to coax confession. Stagg never confessed. He was held over a year, then released; police later apologized. The true killer, Robert Napper, was prosecuted years afterward.</p>
+        <div class="callout callout-warn">
+          <strong>⚖️ Legal aftermath:</strong>
+          <ul style="margin-bottom:0">
+            <li>In 2001 the U.K. ACPO renamed "offender profiler" to <strong>Behavioural Investigative Analyst (BIA)</strong>, requiring ACPO approval.</li>
+            <li>Chapter 9 returns to the admissibility issues (Regina v. Stagg, 1994).</li>
+            <li>Britton's standing fell sharply; calls for scientific profiling intensified.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="questions" class="section-card">
+      <div class="lang-zh-only">
+        <h2>6 · Canter 的四個研究問題</h2>
+        <p>Canter (2000b) 主張：要把 profiling 變成扎實科學，<strong>必須有系統地回答下列四問</strong>。</p>
+        <ol>
+          <li><strong>現場有哪些行為特徵能幫助辨識兇手？</strong>（需 base rate + co-occurrence 資料）</li>
+          <li><strong>如何辨識犯罪間／兇手間的差異？</strong>（unique themes、稀有行為）</li>
+          <li><strong>能對兇手做出什麼推論？</strong>（從可區分的特徵建立人物推估）</li>
+          <li><strong>有沒有其他案件也是同一人所為？</strong>（linkage analysis）</li>
+        </ol>
+        <p>四個問題各自對應到「個別差異心理學」「環境心理學」「認知心理學」「社會心理學」既有的研究典範。</p>
+      </div>
+      <div class="lang-en-only">
+        <h2>6 · Canter's Four Research Questions</h2>
+        <p>Canter (2000b) argues that to make profiling solid science, four questions must be answered systematically:</p>
+        <ol>
+          <li><strong>What scene behavioral features help identify the offender?</strong> (Needs base rates + co-occurrence data.)</li>
+          <li><strong>How to indicate differences between crimes/offenders?</strong> (Unique themes, rare behaviors.)</li>
+          <li><strong>What inferences identify the offender?</strong> (Build a person estimate from distinguishing traits.)</li>
+          <li><strong>Are there other crimes by the same person?</strong> (Linkage analysis.)</li>
+        </ol>
+        <p>Each maps onto existing paradigms in individual differences, environmental, cognitive, and social psychology.</p>
+      </div>
+    </section>
+
+    <section id="ac" class="section-card">
+      <div class="lang-zh-only">
+        <h2>7 · A → C 方程式</h2>
+        <div class="bias-diagram">
+          <strong>🧠 Canter 的核心方程：</strong>
+          <div class="bias-flow">
+            <div class="bias-step"><strong>A — Actions</strong><br>犯案前已知的所有現場行為<br><small>(victims, MO, signature, timing)</small></div>
+            <div class="bias-arrow">→</div>
+            <div class="bias-step"><strong>→ — Inference Process</strong><br>科學與邏輯推論<br><small>(based on research, base rates)</small></div>
+            <div class="bias-arrow">→</div>
+            <div class="bias-step"><strong>C — Characteristics</strong><br>兇手的可識別特徵<br><small>(demographics, psychology, geography)</small></div>
+          </div>
+        </div>
+
+        <p>關鍵在「→」 — 必須交代<strong>「為什麼能從 A 推到 C」</strong>。Alison 等 (2004) 統計大多數 profile 報告對此交代不清。報告應該說：</p>
+        <ul>
+          <li>這個推論的根據是什麼？（哪些研究？哪些 base rate？）</li>
+          <li>推論的強度多強？（用百分比、機率）</li>
+          <li>為什麼這個根據適用於本案？</li>
+        </ul>
+
+        <div class="focus-box">
+          <span class="focus-label">FOCUS 3.3</span>
+          <h4>BIA 模範報告大綱（Alison, West, &amp; Goodwill, 2004）</h4>
+          <ul>
+            <li><strong>Caveat / Disclaimer</strong>：強調是「偵查工具」、非用於指認無辜或有罪。</li>
+            <li><strong>Competence and Qualifications</strong>：作者學經歷。</li>
+            <li><strong>Peer Review</strong>：建議警方請其他法醫心理學家審查。</li>
+            <li><strong>Case Summary and Evaluation</strong>：摘要、評估。</li>
+            <li><strong>Evaluation of the Murder</strong>：用對照表比較嫌犯與相似類型兇手的特徵。</li>
+            <li><strong>Evaluation of Suspect</strong>：基於文獻將嫌犯歸入某類強暴犯類型；用於 linkage。</li>
+            <li><strong>Risk Assessment</strong>：以多項研究為基礎，謹慎地評估再犯。</li>
+            <li><strong>Investigative Recommendations</strong>：聚焦特定地點、生活轉折期等。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>7 · The A → C Equation</h2>
+        <div class="bias-diagram">
+          <strong>🧠 Canter's core equation:</strong>
+          <div class="bias-flow">
+            <div class="bias-step"><strong>A — Actions</strong><br>All known crime-scene behaviors<br><small>(victims, MO, signature, timing)</small></div>
+            <div class="bias-arrow">→</div>
+            <div class="bias-step"><strong>→ — Inference</strong><br>Scientific &amp; logical processes<br><small>(grounded in research and base rates)</small></div>
+            <div class="bias-arrow">→</div>
+            <div class="bias-step"><strong>C — Characteristics</strong><br>Identifying offender traits<br><small>(demographics, psychology, geography)</small></div>
+          </div>
+        </div>
+
+        <p>The crux is "→": the report must explain <strong>why A leads to C</strong>. Alison et al. (2004) found most profile reports do this poorly. Each inference should state:</p>
+        <ul>
+          <li>What is the basis? (Which studies? Which base rates?)</li>
+          <li>How strong is the inference? (Use percentages.)</li>
+          <li>Why is this basis applicable here?</li>
+        </ul>
+
+        <div class="focus-box">
+          <span class="focus-label">FOCUS 3.3</span>
+          <h4>Model BIA Report Outline (Alison, West, &amp; Goodwill, 2004)</h4>
+          <ul>
+            <li><strong>Caveat / Disclaimer</strong>: "Investigative tool, not for innocence/guilt."</li>
+            <li><strong>Competence and Qualifications</strong>: authors' biographies.</li>
+            <li><strong>Peer Review</strong>: encourages review by other forensic psychologists.</li>
+            <li><strong>Case Summary and Evaluation</strong>: details, evaluation.</li>
+            <li><strong>Evaluation of the Murder</strong>: compares suspect traits to typology.</li>
+            <li><strong>Evaluation of Suspect</strong>: classifies the suspect by literature on sex offending; supports linkage.</li>
+            <li><strong>Risk Assessment</strong>: cautious, grounded in research.</li>
+            <li><strong>Investigative Recommendations</strong>: focus areas (locations, life transitions).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="signatures" class="section-card">
+      <div class="lang-zh-only">
+        <h2>8 · 從犯罪簽名到「心理簽名」</h2>
+        <p>Ch 2 介紹的「signature」是兇手<strong>刻意</strong>留下的儀式性印記。Canter 學派提出更廣的概念：</p>
+
+        <table class="compare-table">
+          <thead><tr><th>類型</th><th>定義</th><th>例子</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Crime scene signature</strong></td><td>有意識留下的儀式行為</td><td>把屍體擺特定姿勢、留下符號</td></tr>
+            <tr><td><strong>Psychological signature</strong></td><td>無意識的行為慣性 — 跨情境穩定</td><td>講話節奏、用「她」而非「妳」、特定方言詞</td></tr>
+          </tbody>
+        </table>
+
+        <div class="focus-box">
+          <h4>📡 二戰經典案例（Gladwell 《Blink》）</h4>
+          <p>英國情報員從不懂德文、卻能從 Morse code 的「敲擊節奏」聽出哪位德國電報員在發報，進而推估該部隊位置。德國電報員<strong>無意識地</strong>把人格特質寫進敲鍵節奏 — 這就是 psychological signature。</p>
+        </div>
+
+        <p>Bateman &amp; Salfati (2007) 分析 90 名兇手的 450 起命案，發現「刻意」的 crime scene signature 並不一致 — 受情境影響太大；他們建議未來研究應聚焦在「內在心理流露」的 psychological signature。</p>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>8 · From Crime-Scene to Psychological Signature</h2>
+        <p>Ch 2's "signature" was deliberate ritual behavior. The Canter school extends this:</p>
+
+        <table class="compare-table">
+          <thead><tr><th>Type</th><th>Definition</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Crime scene signature</strong></td><td>Conscious ritual behavior</td><td>Posing the body; symbols</td></tr>
+            <tr><td><strong>Psychological signature</strong></td><td>Unconscious behavioral consistency across contexts</td><td>Speech cadence, "her" not "you," regional dialect</td></tr>
+          </tbody>
+        </table>
+
+        <div class="focus-box">
+          <h4>📡 WWII Case (Gladwell, <em>Blink</em>)</h4>
+          <p>British interceptors couldn't read German Morse but could identify each German operator from <strong>keying cadence</strong> — locating units accordingly. The operators unconsciously encoded personality in their rhythm. That's psychological signature.</p>
+        </div>
+
+        <p>Bateman &amp; Salfati (2007) examined 450 homicides by 90 offenders: deliberate scene signatures were inconsistent (too situation-driven). They urge future research on psychological signatures rooted in intrinsic psychology.</p>
+      </div>
+    </section>
+
+    <section id="theories" class="section-card">
+      <div class="lang-zh-only">
+        <h2>9 · 四個應該掌握的當代犯罪學理論</h2>
+      </div>
+      <div class="lang-en-only">
+        <h2>9 · Four Contemporary Theories You Must Know</h2>
+      </div>
+
+      <div class="area-grid">
+        <article class="area-card area-1"><div class="area-icon">A</div>
+          <div class="lang-zh-only"><h4>Moffitt 發展路徑</h4>
+            <p><strong>LCP（life-course-persistent）</strong>：3 歲前出現問題、神經缺陷 + 家庭環境互動、終身犯罪、占人口 5–10%（女性 1–2%）但犯案率極高。<br><strong>AL（adolescent-limited）</strong>：青少年期才出現，18–26 歲緩解。<br><strong>對 profiling：</strong>連續犯多為 LCP，會在現有罪犯資料庫中 — 「不是要找新人，是要找對的舊人」。</p>
+          </div>
+          <div class="lang-en-only"><h4>Moffitt's Developmental Pathways</h4>
+            <p><strong>LCP</strong>: starts before age 3, neuropsych + family interaction, lifelong; 5–10% of population (females 1–2%), but accounts for the majority of crime.<br><strong>AL</strong>: adolescence only, desists 18–26.<br><strong>For profiling:</strong> serial offenders are usually LCP — already in databases.</p>
+          </div>
+        </article>
+
+        <article class="area-card area-2"><div class="area-icon">B</div>
+          <div class="lang-zh-only"><h4>Steinberg 青少年腦發展</h4>
+            <p>前額葉（自我控制相關）約到 25 歲才完全成熟；衝動／賞酬尋求發展早，自我控制發展晚 — 解釋青少年高風險行為。<br><strong>對 profiling：</strong>衝動、雜亂、高風險的犯罪 → 年輕犯（可能 24 歲以下）；如 <em>"cowboy burglar"</em>。</p>
+          </div>
+          <div class="lang-en-only"><h4>Steinberg's Adolescent Brain</h4>
+            <p>Frontal cortex (self-control) matures ~age 25; reward-seeking peaks earlier than self-control — explaining teen risk-taking.<br><strong>For profiling:</strong> impulsive, sloppy, high-risk scenes → young offenders (often under 24); the "cowboy burglar."</p>
+          </div>
+        </article>
+
+        <article class="area-card area-3"><div class="area-icon">C</div>
+          <div class="lang-zh-only"><h4>同儕拒絕與人際技能不足</h4>
+            <p>5 歲時已具攻擊性的孩子常被同儕排擠；peer rejection 是日後嚴重暴力的強預測因子。<br><strong>對 profiling：</strong>學業／少年紀錄雖難取得，但「青少年期是否被排擠」可能是有用的研判向度。</p>
+          </div>
+          <div class="lang-en-only"><h4>Peer Rejection &amp; Deficient Interpersonal Skills</h4>
+            <p>Aggressive 5-year-olds are excluded by peers; rejection strongly predicts later violence.<br><strong>For profiling:</strong> juvenile records are hard to access, but peer-rejection patterns matter.</p>
+          </div>
+        </article>
+
+        <article class="area-card area-4"><div class="area-icon">D</div>
+          <div class="lang-zh-only"><h4>犯罪心理病態（Psychopathy）</h4>
+            <p>占成人 &lt; 5%，但其犯罪暴力比例極高。強姦犯中盛行率 40–50%；兒童性侵犯中 10–15%。Psychopath 的核心特質：<strong>四群組</strong>（人際印象管理／衝動不負責／情感缺損／反社會傾向）。<br><strong>對 profiling：</strong>無動機、極端殘忍的暴力 → 從具廣泛前科的嫌犯名單中找具上述特徵者。</p>
+          </div>
+          <div class="lang-en-only"><h4>Psychopathy</h4>
+            <p>&lt; 5% of adults but a huge share of violent crime. 40–50% of rapists; 10–15% of child molesters. Four core trait clusters: impression mgmt, impulsive lifestyle, affective deficits, antisocial tendencies.<br><strong>For profiling:</strong> motiveless, sadistic violence → look at extensive-record suspects with these traits.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="errors" class="section-card">
+      <div class="lang-zh-only">
+        <h2>10 · 即使「科學取徑」也躲不過的錯誤源</h2>
+
+        <h3>10.1 Heuristics（捷思）</h3>
+        <p>Kahneman &amp; Tversky 提醒：每個人都用「心智捷徑」 — 在時間壓力下尤其依賴。但同樣的捷徑可能釀成系統性錯誤。</p>
+
+        <table class="compare-table">
+          <thead><tr><th>捷思</th><th>運作</th><th>Profiling 風險</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Representativeness</strong></td><td>把眼前案件套入「典型」類別</td><td>「這像我幾年前處理的案」→ 忽略 base rate</td></tr>
+            <tr><td><strong>Availability</strong></td><td>容易想起的越「重要」</td><td>媒體大量報導的案件被當成「典型」</td></tr>
+          </tbody>
+        </table>
+
+        <div class="focus-box">
+          <h4>📰 Rainbow vs Britton</h4>
+          <p>2010 年《Guardian》的訪談：Britton 對統計沒興趣；Rainbow 指出「84% 的強姦犯曾因其他罪被定罪、但很少是性犯罪」 — 這個事實「乏味卻真實」，正是 representative heuristic 容易忽略的 base rate。</p>
+        </div>
+
+        <h3>10.2 Base Rate Fallacy</h3>
+        <p>Rainbow 等 (2011) 90 歲老婦案經典：現場剝出的心臟、十字撥火棒、燭光、近德魯伊遺址 — <strong>看起來</strong>像教派儀式。但 base rate 顯示「殺害長者多為熟識、住附近者」，加上一個足跡讓警方逮到 17 歲送報生。兇手刻意佈置（staging）誤導，但 base rate 救了偵查方向。</p>
+
+        <h3>10.3 不確定性的表達</h3>
+        <p>Heuer (1999)：「可能」一詞可指 1% 到 99%。Profile 應給<strong>具體百分比</strong>（如 "30% 機率"），否則警方會用 confirmation bias 填入自己的詮釋。</p>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>10 · Error Sources Even in the Scientific Approach</h2>
+
+        <h3>10.1 Heuristics</h3>
+        <p>Kahneman &amp; Tversky: everyone uses mental shortcuts — especially under pressure. Useful, but systematic errors follow.</p>
+
+        <table class="compare-table">
+          <thead><tr><th>Heuristic</th><th>How it works</th><th>Profiling risk</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Representativeness</strong></td><td>Fits the case into a "typical" category</td><td>"Looks like my old case" → ignores base rates</td></tr>
+            <tr><td><strong>Availability</strong></td><td>Easily recalled = "important"</td><td>Media-amplified cases treated as typical</td></tr>
+          </tbody>
+        </table>
+
+        <div class="focus-box">
+          <h4>📰 Rainbow vs Britton</h4>
+          <p>In a 2010 <em>Guardian</em> piece: Britton dismissed statistics; Rainbow noted "84% of rapists have prior convictions, usually not for sexual offenses" — boring but true. The old-school profiler would ignore that base rate.</p>
+        </div>
+
+        <h3>10.2 Base Rate Fallacy</h3>
+        <p>Rainbow et al. (2011)'s 90-year-old woman case: removed heart on a silver tray, fireplace pokers as a crucifix, candles, near Druid ruins — <strong>looked</strong> occult. But base rates say elderly victims are killed by acquaintances nearby. A footprint plus the base rate led to the 17-year-old paperboy. The killer staged it to mislead — but base rates rescued the investigation.</p>
+
+        <h3>10.3 Expressing Uncertainty</h3>
+        <p>Heuer (1999): "could" can mean 1% or 99%. Profiles should give explicit percentages (e.g., "30%"); otherwise confirmation bias fills the gap.</p>
+      </div>
+    </section>
+
+    <section id="glossary" class="section-card">
+      <div class="lang-zh-only">
+        <h2>11 · 關鍵詞彙</h2>
+        <table class="compare-table">
+          <thead><tr><th>詞彙</th><th>一句話定義</th></tr></thead>
+          <tbody>
+            <tr><td><strong>A → C equation</strong></td><td>Canter 核心：從犯案行為(A)透過科學推論(→)得出兇手特徵(C)。</td></tr>
+            <tr><td><strong>Anamnestic prediction</strong></td><td>基於特定個人在特定情境的行為做預測。</td></tr>
+            <tr><td><strong>Availability heuristic</strong></td><td>「容易想起的就重要」捷思偏誤。</td></tr>
+            <tr><td><strong>Base rate fallacy</strong></td><td>忽略群體基本率而過度倚賴特殊性的決策錯誤。</td></tr>
+            <tr><td><strong>BIA</strong></td><td>英國 2001 年起取代「offender profiler」的名稱：行為偵查分析師。</td></tr>
+            <tr><td><strong>Belief perseverance</strong></td><td>即使證據被推翻，仍堅守原信念。</td></tr>
+            <tr><td><strong>Decision tree model</strong></td><td>以樹狀流程整合三類預測知識的決策模型。</td></tr>
+            <tr><td><strong>Falsifiability</strong></td><td>Popper：科學陳述必須能被經驗推翻。</td></tr>
+            <tr><td><strong>Heuristic</strong></td><td>思考捷徑；省時但易致系統性錯誤。</td></tr>
+            <tr><td><strong>Investigative psychology</strong></td><td>Canter 發展的應用心理學分支，把心理學系統地用於犯罪偵查。</td></tr>
+            <tr><td><strong>LCP / AL</strong></td><td>Moffitt 的兩條發展路徑：終生持續型 / 青少年限定型。</td></tr>
+            <tr><td><strong>Method of tenacity</strong></td><td>不管證據如何都堅信，Peirce 四法中最弱者。</td></tr>
+            <tr><td><strong>Psychological signature</strong></td><td>無意識、跨情境的行為慣性。</td></tr>
+            <tr><td><strong>Psychopathy</strong></td><td>四群組特徵：人際印象、衝動生活、情感缺損、反社會。</td></tr>
+            <tr><td><strong>Representativeness heuristic</strong></td><td>用「像不像典型」做判斷的捷思。</td></tr>
+            <tr><td><strong>ViCLAS</strong></td><td>加拿大 RCMP 發展、跨國採用的暴力犯罪連結分析系統。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>11 · Key Concepts</h2>
+        <table class="compare-table">
+          <thead><tr><th>Term</th><th>One-line definition</th></tr></thead>
+          <tbody>
+            <tr><td><strong>A → C equation</strong></td><td>Canter's core: scene actions (A) → inference (→) → offender characteristics (C).</td></tr>
+            <tr><td><strong>Anamnestic prediction</strong></td><td>Based on how a specific person behaves in specific situations.</td></tr>
+            <tr><td><strong>Availability heuristic</strong></td><td>"Easier to recall = more important" bias.</td></tr>
+            <tr><td><strong>Base rate fallacy</strong></td><td>Decision error from neglecting group base rates.</td></tr>
+            <tr><td><strong>BIA</strong></td><td>U.K. replacement for "offender profiler" since 2001.</td></tr>
+            <tr><td><strong>Belief perseverance</strong></td><td>Sticking to beliefs despite refutation.</td></tr>
+            <tr><td><strong>Decision tree model</strong></td><td>Tree-based decision support integrating prediction types.</td></tr>
+            <tr><td><strong>Falsifiability</strong></td><td>Popper: scientific claims must be empirically refutable.</td></tr>
+            <tr><td><strong>Heuristic</strong></td><td>Mental shortcut; time-saving but systematically error-prone.</td></tr>
+            <tr><td><strong>Investigative psychology</strong></td><td>Canter's applied psychology branch for criminal investigation.</td></tr>
+            <tr><td><strong>LCP / AL</strong></td><td>Moffitt's life-course-persistent / adolescent-limited pathways.</td></tr>
+            <tr><td><strong>Method of tenacity</strong></td><td>"I've always believed it" — Peirce's weakest method.</td></tr>
+            <tr><td><strong>Psychological signature</strong></td><td>Unconscious cross-situational behavioral consistency.</td></tr>
+            <tr><td><strong>Psychopathy</strong></td><td>Four-cluster construct: impression mgmt, impulsive lifestyle, affective deficits, antisocial.</td></tr>
+            <tr><td><strong>Representativeness heuristic</strong></td><td>Judging by "resemblance to typical case."</td></tr>
+            <tr><td><strong>ViCLAS</strong></td><td>Canadian RCMP violent-crime linkage system adopted internationally.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="summary" class="section-card">
+      <div class="lang-zh-only">
+        <h2>12 · 本章總結</h2>
+        <ol>
+          <li>Rainbow &amp; Gregory 三大誤解（人格預測、破案、已是科學）告訴我們：profile 應該謙卑、行為導向、可被驗證。</li>
+          <li>Peirce 四法 + Popper 可否證性，為 profiling 設立科學門檻。</li>
+          <li>Canter 從 Railway Rapist 案開啟 investigative psychology；A→C 方程式要求每個推論交代「為什麼」。</li>
+          <li>Britton-Stagg 冤案促成 ACPO BIA 制度與更嚴格的科學要求。</li>
+          <li>Canter 四問 + 三類預測（anamnestic、actuarial、clinical）+ decision tree = 結構化專業判斷。</li>
+          <li>Psychological signature 強調「無意識行為慣性」 — 跨情境穩定，可能比刻意 signature 更可靠。</li>
+          <li>四個當代犯罪學理論（Moffitt、Steinberg、Peer rejection、Psychopathy）應該整合進 profile 報告。</li>
+          <li>Heuristics、base rate fallacy、模糊機率語言仍是科學取徑的潛在陷阱。</li>
+        </ol>
+        <div class="callout callout-tip"><strong>🎯 一句話帶走：</strong>「科學的 profile 不是『直覺套上術語』，而是『每個句子都能交代來源、強度、可否證性』。」</div>
+      </div>
+      <div class="lang-en-only">
+        <h2>12 · Chapter Summary</h2>
+        <ol>
+          <li>Rainbow &amp; Gregory's three misconceptions — profiles should be humble, behavioral, testable.</li>
+          <li>Peirce's four ways + Popper's falsifiability set the scientific bar.</li>
+          <li>Canter's work on the Railway Rapist birthed investigative psychology; the A→C equation demands "why" for each inference.</li>
+          <li>The Britton-Stagg miscarriage led to ACPO's BIA framework and tougher scientific standards.</li>
+          <li>Canter's 4 questions + 3 prediction types (anamnestic, actuarial, clinical) + decision trees = structured professional judgment.</li>
+          <li>Psychological signatures stress unconscious cross-situational consistency — potentially more reliable than deliberate signatures.</li>
+          <li>Four contemporary theories (Moffitt, Steinberg, peer rejection, psychopathy) should be integrated into profile reports.</li>
+          <li>Heuristics, base-rate fallacy, vague probability language remain traps even in scientific profiling.</li>
+        </ol>
+        <div class="callout callout-tip"><strong>🎯 One-liner takeaway:</strong> "A scientific profile isn't 'intuition with jargon' — every sentence cites a source, strength, and falsifiable claim."</div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section-card quiz-container" style="padding:1.25rem"></section>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="copyright">© 2026 葉欲禾 (Gary Yu-Ho YEH) — All Rights Reserved 版權所有</p>
+    <p><span class="lang-zh-only">本互動教材改編自 Bartol &amp; Bartol (2013). <em>Criminal &amp; Behavioral Profiling</em>. SAGE。內容僅供本人線上教學使用。</span>
+       <span class="lang-en-only">Adapted from Bartol &amp; Bartol (2013). <em>Criminal &amp; Behavioral Profiling</em>. SAGE. For non-commercial classroom use only.</span></p>
+    <p><a href="../index.html"><span class="lang-zh-only">← 回到目錄首頁</span><span class="lang-en-only">← Back to Table of Contents</span></a></p>
+  </div>
+</footer>
+
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/data/chapter3-quiz.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const c = document.querySelector("#quiz");
+    if (c && window.CBP?.QuizBank?.chapter3) {
+      new window.CBP.Quiz({ container: c, bank: window.CBP.QuizBank.chapter3.questions, count: 10,
+        onSubmit: p => console.log("[Ch3 Quiz]", p) });
+    }
+  });
+</script>
+</body>
+</html>

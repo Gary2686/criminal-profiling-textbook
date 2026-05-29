@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 4：地理側寫與犯罪地圖 — Criminal & Behavioral Profiling 互動教材</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="lang-zh">
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title"><span>🔍</span>
+      <span class="lang-zh-only">犯罪與行為側寫 · 互動教材</span>
+      <span class="lang-en-only">Criminal & Behavioral Profiling · Interactive</span></a>
+    <div class="lang-toggle"><button data-lang="zh" class="active">中文</button><button data-lang="en">English</button></div>
+  </div>
+</header>
+
+<section class="chapter-hero"><div class="container">
+  <div class="lang-zh-only">
+    <p style="opacity:.85;letter-spacing:.3em;margin-bottom:.5rem">CHAPTER 4</p>
+    <h1>地理側寫與犯罪地圖</h1>
+    <p class="subtitle">「我不要心理學術語，我只想知道他住哪、下一案在哪。」 — 從芝加哥學派同心圓到 Rossmo 的 CGT 演算法，從 Marauder/Commuter 到 Hunter/Poacher/Troller/Trapper，理解空間如何洩漏兇手的位置。</p>
+  </div>
+  <div class="lang-en-only">
+    <p style="opacity:.85;letter-spacing:.3em;margin-bottom:.5rem">CHAPTER 4</p>
+    <h1>Geographic Profiling &amp; Mapping</h1>
+    <p class="subtitle">"I don't want psychological jargon — I just want to know where he lives and where he'll strike next." From the Chicago School's concentric circles to Rossmo's CGT, from Marauder/Commuter to Hunter/Poacher/Troller/Trapper — how space betrays an offender's anchor point.</p>
+  </div>
+</div></section>
+
+<div class="chapter-layout">
+  <aside><nav class="chapter-toc">
+    <div class="lang-zh-only"><h4>本章目錄</h4></div><div class="lang-en-only"><h4>Contents</h4></div>
+    <ol>
+      <li><a href="#mapping-vs-profiling"><span class="lang-zh-only">Mapping vs Profiling</span><span class="lang-en-only">Mapping vs Profiling</span></a></li>
+      <li><a href="#history"><span class="lang-zh-only">芝加哥學派與環境犯罪學</span><span class="lang-en-only">Chicago School &amp; Env. Criminology</span></a></li>
+      <li><a href="#theories"><span class="lang-zh-only">兩大理論基石</span><span class="lang-en-only">Two Foundational Theories</span></a></li>
+      <li><a href="#concepts"><span class="lang-zh-only">核心概念</span><span class="lang-en-only">Core Concepts</span></a></li>
+      <li><a href="#marauder"><span class="lang-zh-only">Marauder vs Commuter</span><span class="lang-en-only">Marauder vs Commuter</span></a></li>
+      <li><a href="#rossmo-typology"><span class="lang-zh-only">Rossmo 狩獵類型</span><span class="lang-en-only">Rossmo Hunting Typology</span></a></li>
+      <li><a href="#software"><span class="lang-zh-only">三大 GP 軟體</span><span class="lang-en-only">Three GP Programs</span></a></li>
+      <li><a href="#assumptions"><span class="lang-zh-only">六個基本假設</span><span class="lang-en-only">Six Assumptions</span></a></li>
+      <li><a href="#heuristics-vs-software"><span class="lang-zh-only">捷思法 vs 電腦</span><span class="lang-en-only">Heuristics vs Software</span></a></li>
+      <li><a href="#bayes"><span class="lang-zh-only">Bayesian 改進</span><span class="lang-en-only">Bayesian Improvements</span></a></li>
+      <li><a href="#glossary"><span class="lang-zh-only">關鍵詞彙</span><span class="lang-en-only">Glossary</span></a></li>
+      <li><a href="#summary"><span class="lang-zh-only">總結</span><span class="lang-en-only">Summary</span></a></li>
+      <li><a href="#quiz"><span class="lang-zh-only">自我評量</span><span class="lang-en-only">Quiz</span></a></li>
+    </ol>
+  </nav></aside>
+
+  <main>
+
+    <section id="mapping-vs-profiling" class="section-card">
+      <div class="lang-zh-only">
+        <h2>1 · Mapping vs Profiling — 一張表分清楚</h2>
+        <p>很多人混用「地理側寫」與「犯罪地圖」這兩個詞。本書（與本章）給它們清楚的分工：</p>
+        <table class="compare-table">
+          <thead><tr><th>項目</th><th>Geographic Mapping</th><th>Geographic Profiling</th></tr></thead>
+          <tbody>
+            <tr><td>分析對象</td><td>「眾多」兇手在「一段時間」的犯罪空間</td><td>「單一」連續犯（或小群體）的空間移動</td></tr>
+            <tr><td>主要產出</td><td>Hot spots / hot places 熱點</td><td>兇手「住處或活動基地」的機率梯度地圖</td></tr>
+            <tr><td>典型工具</td><td>GIS、CompStat、GeoDa</td><td>Rigel、CrimeStat、Dragnet</td></tr>
+            <tr><td>常見用途</td><td>警力配置、預防、預測警政</td><td>縮小偵查範圍</td></tr>
+          </tbody>
+        </table>
+        <p>但兩者其實互補。Mapping 提供 base rate 與環境理論支援；Profiling 則把這些見解套用到單一案件。</p>
+      </div>
+      <div class="lang-en-only">
+        <h2>1 · Mapping vs Profiling — One Table</h2>
+        <p>The two terms are often conflated. This chapter (and book) draws a clear distinction:</p>
+        <table class="compare-table">
+          <thead><tr><th></th><th>Geographic Mapping</th><th>Geographic Profiling</th></tr></thead>
+          <tbody>
+            <tr><td>Subject</td><td>Many offenders over time</td><td>One serial offender (or a small group)</td></tr>
+            <tr><td>Output</td><td>Hot spots / hot places</td><td>Probability surface for residence / anchor point</td></tr>
+            <tr><td>Tools</td><td>GIS, CompStat, GeoDa</td><td>Rigel, CrimeStat, Dragnet</td></tr>
+            <tr><td>Use</td><td>Patrol allocation, prevention, predictive policing</td><td>Narrowing investigative focus</td></tr>
+          </tbody>
+        </table>
+        <p>They're complementary: mapping yields base rates and environmental insight; profiling applies them to a single case.</p>
+      </div>
+    </section>
+
+    <section id="history" class="section-card">
+      <div class="lang-zh-only">
+        <h2>2 · 從芝加哥學派到環境犯罪學</h2>
+        <div class="timeline">
+          <div class="timeline-item"><span class="year">1833</span><h4>Gerry 法國區域定罪率差異</h4><p>Brantingham &amp; Brantingham 認為這是「空間犯罪研究」的起點。</p></div>
+          <div class="timeline-item"><span class="year">1915</span><h4>Park &amp; Burgess 芝加哥學派論文</h4><p>環境犯罪學正式起源；學生繪製「點狀地圖」、訪談、系統觀察。</p></div>
+          <div class="timeline-item"><span class="year">1920s</span><h4>Burgess 同心圓理論</h4><p>城市以同心圓向外擴張，<strong>Zone 2「轉型地帶（zone of transition）」</strong>犯罪、貧困、健康問題最集中。</p></div>
+          <div class="timeline-item"><span class="year">1969</span><h4>Shaw &amp; McKay 驗證</h4><p>以 100,000+ 名 Cook County 少年法院個案，確認 zone of transition 是「犯罪溫床（hot beds）」。</p></div>
+          <div class="timeline-item"><span class="year">1970s–80s</span><h4>環境犯罪學成熟</h4><p>Brantinghams 強調「犯罪機會分佈」決定犯罪 — 找到「distance decay」現象。</p></div>
+          <div class="timeline-item"><span class="year">1979</span><h4>Cohen &amp; Felson — Routine Activity Theory</h4><p>三要件論：動機犯罪者 + 合適目標 + 缺乏監護者。</p></div>
+          <div class="timeline-item"><span class="year">1995–2000</span><h4>Rossmo — CGT → Rigel</h4><p>加拿大首位「警官+犯罪學博士」，把空間分析變成 GP 演算法。</p></div>
+        </div>
+
+        <div class="callout callout-tip">
+          <strong>🏙 為什麼是芝加哥？</strong>1900–1930 大移民潮、城市擴張、工業化 → 城市內社會結構快速變動 → 提供觀察「社會解組」與犯罪的天然實驗室。Shaw 後續建立「Chicago Area Project」 — 美國最早的社區行動方案，把學者帶進街頭與少年合作。
+        </div>
+      </div>
+      <div class="lang-en-only">
+        <h2>2 · From Chicago School to Environmental Criminology</h2>
+        <div class="timeline">
+          <div class="timeline-item"><span class="year">1833</span><h4>Gerry on French regional conviction rates</h4><p>Brantinghams call this the start of spatial criminology.</p></div>
+          <div class="timeline-item"><span class="year">1915</span><h4>Park &amp; Burgess (Chicago School)</h4><p>Environmental criminology is formally born; students prepared spot maps, interviews, observations.</p></div>
+          <div class="timeline-item"><span class="year">1920s</span><h4>Burgess's Concentric Circle Theory</h4><p>Cities expand in concentric zones; <strong>Zone 2, the "zone of transition,"</strong> concentrates crime, poverty, and health problems.</p></div>
+          <div class="timeline-item"><span class="year">1969</span><h4>Shaw &amp; McKay validation</h4><p>Using 100,000+ Cook County juveniles, confirmed transition zones as "hot beds" of crime.</p></div>
+          <div class="timeline-item"><span class="year">1970s–80s</span><h4>Environmental criminology matures</h4><p>Brantinghams: opportunity distribution drives crime; the "distance decay" pattern.</p></div>
+          <div class="timeline-item"><span class="year">1979</span><h4>Cohen &amp; Felson — Routine Activity Theory</h4><p>Three elements: motivated offender + suitable target + no capable guardian.</p></div>
+          <div class="timeline-item"><span class="year">1995–2000</span><h4>Rossmo — CGT → Rigel</h4><p>Canada's first cop-PhD turns spatial analysis into a GP algorithm.</p></div>
+        </div>
+
+        <div class="callout callout-tip">
+          <strong>🏙 Why Chicago?</strong> 1900–1930 immigration, urban expansion, industrialization made the city a natural lab for "social disorganization." Shaw later founded the Chicago Area Project — the first U.S. community-action program putting scholars into streets with youth.
+        </div>
+      </div>
+    </section>
+
+    <section id="theories" class="section-card">
+      <div class="lang-zh-only">
+        <h2>3 · 兩大理論基石</h2>
+
+        <div class="focus-box">
+          <span class="focus-label">THEORY A</span>
+          <h4>Routine Activity Theory（日常活動理論）</h4>
+          <p>Cohen &amp; Felson (1979) — 原本是「被害學」：為什麼某些人成為被害人？犯罪需要三要件「同時、同地」出現：</p>
+          <div class="bias-flow" style="margin-top:.75rem">
+            <div class="bias-step"><strong>動機犯罪者</strong><br>Motivated offender</div>
+            <div class="bias-arrow">+</div>
+            <div class="bias-step"><strong>合適目標</strong><br>Suitable victim/target</div>
+            <div class="bias-arrow">+</div>
+            <div class="bias-step"><strong>缺乏監護者</strong><br>Absence of guardian</div>
+          </div>
+          <p style="margin-top:.75rem;margin-bottom:0"><strong>抽掉任何一個都能降低犯罪機率</strong> — 這就是現代犯罪預防的核心邏輯。</p>
+        </div>
+
+        <div class="focus-box">
+          <span class="focus-label">THEORY B</span>
+          <h4>Rational Choice Theory（理性選擇理論）</h4>
+          <p>源自 18–19 世紀古典學派（Beccaria、Bentham）；現代版本（Cornish &amp; Clark, 1986）認為犯罪者進行<strong>成本效益分析</strong>。距離家越遠 → 風險與成本越高 → 必須有更大的預期效益才會去。</p>
+          <p>這也解釋了為什麼某些連續殺人犯（Dahmer、Gacy、Pickton）把屍體留在家中或家附近 — 運送成本太高。</p>
+        </div>
+
+        <div class="callout">
+          <div class="lang-zh-only"><strong>🧩 Crime Pattern Theory：</strong>Brantinghams 把以上兩個理論整合成「犯罪型態理論」 — 環境犯罪學的核心。同時也是地理側寫的理論底座。</div>
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>3 · Two Foundational Theories</h2>
+
+        <div class="focus-box">
+          <span class="focus-label">THEORY A</span>
+          <h4>Routine Activity Theory</h4>
+          <p>Cohen &amp; Felson (1979) — originally victimology. Three elements must converge in time and space:</p>
+          <div class="bias-flow" style="margin-top:.75rem">
+            <div class="bias-step"><strong>Motivated offender</strong></div>
+            <div class="bias-arrow">+</div>
+            <div class="bias-step"><strong>Suitable target</strong></div>
+            <div class="bias-arrow">+</div>
+            <div class="bias-step"><strong>Absence of guardian</strong></div>
+          </div>
+          <p style="margin-top:.75rem;margin-bottom:0"><strong>Remove any one → crime probability drops.</strong> The backbone of modern crime prevention.</p>
+        </div>
+
+        <div class="focus-box">
+          <span class="focus-label">THEORY B</span>
+          <h4>Rational Choice Theory</h4>
+          <p>Roots in 18th–19th century Classical School (Beccaria, Bentham). Modern form (Cornish &amp; Clark, 1986): offenders perform <strong>cost-benefit analysis</strong>. Farther from home = higher risk/cost = needs greater expected reward.</p>
+          <p>It explains why some serial killers (Dahmer, Gacy, Pickton) dispose of bodies at home — transport costs too much.</p>
+        </div>
+
+        <div class="callout">
+          <div class="lang-en-only"><strong>🧩 Crime Pattern Theory:</strong> Brantinghams integrated both into environmental criminology's central framework — also the theoretical bedrock of geographic profiling.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="concepts" class="section-card">
+      <div class="lang-zh-only">
+        <h2>4 · 五個核心地理概念</h2>
+
+        <div class="concept-card">
+          <div class="concept-term">① Distance Decay 距離衰減</div>
+          <p style="margin-bottom:0">「離兇手住處越遠，犯案機率越低」 — 機率曲線「衰減」。CGT、Rigel、CrimeStat 都建立在這個函數上。Levine (2009) 指出單靠 distance decay 會產生「高度誤差」 — 必須結合其他因素。</p>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-term">② Buffer Zone 緩衝區</div>
+          <p>兇手住處附近的「不太犯案」區域 — 因為怕被鄰居認出。</p>
+          <ul style="margin-bottom:0">
+            <li>典型大小：&lt; ¼ 英里（一般財產犯）</li>
+            <li>銀行劫匪：~5 英里（銀行少，必須遠走）</li>
+            <li>汽車竊賊：~1 英里（車多，附近就有）</li>
+            <li>強姦與命案因衝動性高，buffer zone 不明顯</li>
+          </ul>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-term">③ Mental Maps（認知地圖）</div>
+          <p style="margin-bottom:0">Kitchin (1994)：「一個心智裝置，幫我們把無限複雜的世界編碼、簡化、排序。」失智症（Alzheimer's）患者就是失去 mental map 而迷路。兇手的 mental map 包含偏好、價值、可運用機會。Bennett &amp; Wright (1984) 訪南英監獄竊賊發現多數案件有預謀，靠的就是 mental map + cognitive scripts。</p>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-term">④ Awareness / Action Space + Target Backcloth</div>
+          <p>Brantinghams 三組概念：</p>
+          <ul style="margin-bottom:0">
+            <li><strong>Action space：</strong>兇手日常活動的地理區（家、工作、娛樂、購物、連結路徑）。</li>
+            <li><strong>Awareness space：</strong>兇手有「認知地圖」的地理區 — 通常等於 action space。</li>
+            <li><strong>Target backcloth：</strong>從兇手角度看「合適目標的時空分佈」 — 隨日期、時段、季節變動。</li>
+          </ul>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-term">⑤ Centrality / Domocentricity 中心性</div>
+          <p style="margin-bottom:0">「家就是圓心，犯案散佈於周圍」 — Canter &amp; Larkin (1993) 在英國 87% 連續強姦犯資料中得到驗證。但下節會看到這個假設並不總是成立。</p>
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>4 · Five Core Geographic Concepts</h2>
+
+        <div class="concept-card">
+          <div class="concept-term">① Distance Decay</div>
+          <p style="margin-bottom:0">"The farther from the offender's home, the lower the offending probability." CGT, Rigel, CrimeStat all build on this. Levine (2009): relying on decay alone produces high error — combine with other factors.</p>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-term">② Buffer Zone</div>
+          <p>A nearby zone offenders avoid — fear of being recognized.</p>
+          <ul style="margin-bottom:0">
+            <li>Typical: &lt; ¼ mile (general property)</li>
+            <li>Bank robbers: ~5 miles (banks are rare, must travel)</li>
+            <li>Car thieves: ~1 mile (cars are everywhere)</li>
+            <li>Rape and homicide — impulsive, buffer less clear</li>
+          </ul>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-term">③ Mental Maps</div>
+          <p style="margin-bottom:0">Kitchin (1994): "A mental device and store helping simplify, code, and order the endlessly complex world." Alzheimer's patients lose their mental maps and get lost. Offenders' mental maps include preferences, values, opportunities. Bennett &amp; Wright (1984): most professional burglars planned via mental maps + cognitive scripts.</p>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-term">④ Awareness / Action Space + Target Backcloth</div>
+          <p>Brantinghams' triad:</p>
+          <ul style="margin-bottom:0">
+            <li><strong>Action space:</strong> routine geographic area (home, work, leisure, shopping, paths).</li>
+            <li><strong>Awareness space:</strong> the area for which they have a mental map.</li>
+            <li><strong>Target backcloth:</strong> spatial/temporal distribution of suitable targets from the offender's view — varies by time and season.</li>
+          </ul>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-term">⑤ Centrality / Domocentricity</div>
+          <p style="margin-bottom:0">"Home is the center; crimes surround it." Canter &amp; Larkin (1993) validated this for 87% of UK serial rapists — but the next section shows it doesn't always hold.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="marauder" class="section-card">
+      <div class="lang-zh-only">
+        <h2>5 · Marauder vs Commuter — 兩種空間人格</h2>
+        <div class="profile-compare">
+          <div class="profile-col predicted"><h5>🏠 Marauder（劫掠者）</h5>
+            <ul>
+              <li><span class="match-yes">●</span> 從家出發 → 犯案 → 回家</li>
+              <li><span class="match-yes">●</span> 犯案地散佈於「家為圓心」的圓圈</li>
+              <li><span class="match-yes">●</span> 連續殺人犯：UK 86%、US 89% 為 marauder</li>
+              <li><span class="match-yes">●</span> 表達型／情緒型犯罪（強姦、報復縱火）多為 marauder</li>
+            </ul>
+          </div>
+          <div class="profile-col actual"><h5>🚗 Commuter（通勤者）</h5>
+            <ul>
+              <li><span class="match-yes">●</span> 從家「通勤」到另一區犯案</li>
+              <li><span class="match-yes">●</span> 犯案地與住處幾乎不重疊</li>
+              <li><span class="match-yes">●</span> US 連續強姦犯 51%、加拿大連續性侵犯 43% 為 commuter</li>
+              <li><span class="match-yes">●</span> 工具型犯罪（職業搶劫 63% 為 commuter）多為此類</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout callout-warn">
+          <strong>⚠️ Centrality 不是萬靈丹：</strong>對某些犯罪類型，centrality 假設只成立約 50%。如果 GP 一開始就假設兇手是 marauder，可能把警力導向錯誤方向。Paulsen (2007) 呼籲：「先預測類型，再做 profile」。
+        </div>
+
+        <h3>Windshield Wiper Effect 雨刷效應</h3>
+        <p>Lundrigan &amp; Canter (2001) 分析 79 名美國連續殺人犯：兇手不是 360° 均勻散佈，而是像「雨刷」從家為扇柄、平均 60° 扇出。原因：地形（湖、河、高速公路）、社區偏好、交通動線等。</p>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>5 · Marauder vs Commuter — Two Spatial Personas</h2>
+        <div class="profile-compare">
+          <div class="profile-col predicted"><h5>🏠 Marauder</h5>
+            <ul>
+              <li><span class="match-yes">●</span> Leaves home → offends → returns</li>
+              <li><span class="match-yes">●</span> Crimes circle the home</li>
+              <li><span class="match-yes">●</span> Serial killers: ~86% (UK) / ~89% (US) marauders</li>
+              <li><span class="match-yes">●</span> Expressive/emotional crimes (rape, revenge arson) typically marauder</li>
+            </ul>
+          </div>
+          <div class="profile-col actual"><h5>🚗 Commuter</h5>
+            <ul>
+              <li><span class="match-yes">●</span> "Commutes" from home to another area to offend</li>
+              <li><span class="match-yes">●</span> Crime sites and home barely overlap</li>
+              <li><span class="match-yes">●</span> US serial rapists 51%, Canadian sexual assaulters 43% — commuters</li>
+              <li><span class="match-yes">●</span> Instrumental crimes (commercial robbery 63%) often commuters</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout callout-warn">
+          <strong>⚠️ Centrality is not universal:</strong> For some crime types, it holds only ~50%. Assuming marauder upfront can misdirect police. Paulsen (2007): "First predict the type, then build the profile."
+        </div>
+
+        <h3>The Windshield Wiper Effect</h3>
+        <p>Lundrigan &amp; Canter (2001), 79 U.S. serial killers: offenders don't spread 360° evenly — they fan out like a windshield wiper at ~60° average, from home as the pivot. Reasons: terrain (lakes, rivers, highways), neighborhood preference, transport.</p>
+      </div>
+    </section>
+
+    <section id="rossmo-typology" class="section-card">
+      <div class="lang-zh-only">
+        <h2>6 · Rossmo 狩獵類型（4 × 3）</h2>
+        <p>Rossmo (1997) 把「掠食者」式連續犯依「找受害者方式」與「攻擊方式」分為兩個正交維度：</p>
+
+        <h3>四種狩獵模式</h3>
+        <div class="area-grid">
+          <article class="area-card area-1"><div class="area-icon">🏹</div>
+            <div class="lang-zh-only"><h4>Hunter 獵人</h4><p>從家出發、在 awareness space 內主動找受害者；地理穩定。≈ marauder。</p></div>
+          </article>
+          <article class="area-card area-2"><div class="area-icon">🦌</div>
+            <div class="lang-zh-only"><h4>Poacher 盜獵者</h4><p>較流動，遠離家去找。≈ commuter。</p></div>
+          </article>
+          <article class="area-card area-3"><div class="area-icon">🚶</div>
+            <div class="lang-zh-only"><h4>Troller 漫遊者</h4><p>不刻意找；在日常活動中偶遇受害者。</p></div>
+          </article>
+          <article class="area-card area-4"><div class="area-icon">🕸</div>
+            <div class="lang-zh-only"><h4>Trapper 設陷阱者</h4><p>創造情境讓受害者上門 — 約會、登廣告、收房客、特定職位。<strong>多數女性連續殺人犯（「黑寡婦」、「死亡天使」、機構照顧者）屬此。</strong></p></div>
+          </article>
+        </div>
+
+        <h3>三種攻擊方式</h3>
+        <table class="compare-table">
+          <thead><tr><th>方式</th><th>定義</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Raptor 猛禽</strong></td><td>相遇即攻擊</td></tr>
+            <tr><td><strong>Stalker 潛行</strong></td><td>先尾隨後攻擊</td></tr>
+            <tr><td><strong>Ambusher 伏擊</strong></td><td>誘騙到自己控制地點才下手；屍體常藏在自宅</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><strong>💡 GP 對哪些組合最有效？</strong> Hunter/Raptor 和 Trapper/Ambusher 是最常見組合，但 Poacher 和 Stalker 通常「不會產生適合 GP 的目標模式」。</div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>6 · Rossmo's Hunting Typology (4 × 3)</h2>
+        <p>Rossmo (1997) classifies predatory serial offenders on two orthogonal dimensions:</p>
+
+        <h3>Four Hunting Patterns</h3>
+        <div class="area-grid">
+          <article class="area-card area-1"><div class="area-icon">🏹</div>
+            <div class="lang-en-only"><h4>Hunter</h4><p>Sets out from home; searches awareness space for victims; geographically stable. ≈ marauder.</p></div>
+          </article>
+          <article class="area-card area-2"><div class="area-icon">🦌</div>
+            <div class="lang-en-only"><h4>Poacher</h4><p>More transient; travels far from home. ≈ commuter.</p></div>
+          </article>
+          <article class="area-card area-3"><div class="area-icon">🚶</div>
+            <div class="lang-en-only"><h4>Troller</h4><p>No specific search — randomly encounters victims during routine activity.</p></div>
+          </article>
+          <article class="area-card area-4"><div class="area-icon">🕸</div>
+            <div class="lang-en-only"><h4>Trapper</h4><p>Creates situations to draw victims — dates, want ads, boarders, certain jobs. <strong>Most female serial killers (black widows, angels of death, custodial killers) fit here.</strong></p></div>
+          </article>
+        </div>
+
+        <h3>Three Attack Methods</h3>
+        <table class="compare-table">
+          <thead><tr><th>Method</th><th>Definition</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Raptor</strong></td><td>Attack on encounter</td></tr>
+            <tr><td><strong>Stalker</strong></td><td>Follow then attack</td></tr>
+            <tr><td><strong>Ambusher</strong></td><td>Lure to a controlled location; bodies often hidden on the offender's property</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout"><strong>💡 Which combinations suit GP best?</strong> Hunter/Raptor and Trapper/Ambusher are most common; Poacher and Stalker typically don't produce target patterns amenable to GP.</div>
+      </div>
+    </section>
+
+    <section id="software" class="section-card">
+      <div class="lang-zh-only">
+        <h2>7 · 三大 GP 軟體</h2>
+        <table class="compare-table">
+          <thead><tr><th>軟體</th><th>開發者</th><th>核心邏輯</th><th>特性</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Rigel</strong></td>
+              <td>Kim Rossmo（基於 CGT 演算法）</td>
+              <td>3D 機率地圖；計算每個區域是兇手基地的機率</td>
+              <td>商業軟體、功能最齊全；可自動產生 search area、報告、嫌犯優先順序</td>
+            </tr>
+            <tr>
+              <td><strong>CrimeStat</strong></td>
+              <td>Ned Levine（NIJ 資助）</td>
+              <td>Crime travel demand model；中心最小距離</td>
+              <td>Windows、整合多數 GIS；v3.x 起加入 5 種 distance decay 函數與 Bayesian</td>
+            </tr>
+            <tr>
+              <td><strong>Dragnet</strong></td>
+              <td>David Canter（UK）</td>
+              <td>互動式機率指標</td>
+              <td>輕量、PC 操作門檻低；同時可做研究工具</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>常見準確度指標</h3>
+        <ul>
+          <li><strong>Error distance</strong>：實際住處到預測最高機率區的距離。</li>
+          <li><strong>Search cost / Hit score</strong>：要搜索多大比例的格子才會找到兇手基地。</li>
+          <li><strong>Top profile area</strong>：模型預測最可能是基地的區塊大小。</li>
+          <li><strong>Profile accuracy</strong>：兇手是否落在 top profile area 內。</li>
+        </ul>
+
+        <div class="focus-box">
+          <span class="focus-label">FOCUS 4.1</span>
+          <h4>ATF 與 GP</h4>
+          <p>美國 ATF（菸酒槍砲爆炸物管理局）自 1986 年起在 NCAVC 派駐探員，目前有 1 名行為 profiler + 1 名 GP profiler，是<strong>美國唯一</strong>聯邦機構設置 GP profiler 的部門。受訓 2 年並通過 ICIAF 認證。</p>
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>7 · Three GP Software Programs</h2>
+        <table class="compare-table">
+          <thead><tr><th>Software</th><th>Developer</th><th>Core Logic</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Rigel</strong></td>
+              <td>Kim Rossmo (built on CGT)</td>
+              <td>3D probability map; per-area base probability</td>
+              <td>Commercial, most full-featured; auto search area, reports, suspect priorities</td>
+            </tr>
+            <tr>
+              <td><strong>CrimeStat</strong></td>
+              <td>Ned Levine (NIJ-funded)</td>
+              <td>Crime travel demand model; center of minimum distance</td>
+              <td>Windows, GIS-friendly; v3+ adds 5 decay functions and Bayesian</td>
+            </tr>
+            <tr>
+              <td><strong>Dragnet</strong></td>
+              <td>David Canter (UK)</td>
+              <td>Interactive probability indicator</td>
+              <td>Lightweight, low PC entry; also a research tool</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Accuracy Metrics</h3>
+        <ul>
+          <li><strong>Error distance:</strong> actual residence vs. predicted top-probability area.</li>
+          <li><strong>Search cost / hit score:</strong> what fraction of grid must be searched.</li>
+          <li><strong>Top profile area:</strong> predicted area most likely to contain the base.</li>
+          <li><strong>Profile accuracy:</strong> does the offender fall inside the top profile area?</li>
+        </ul>
+
+        <div class="focus-box">
+          <span class="focus-label">FOCUS 4.1</span>
+          <h4>ATF and GP</h4>
+          <p>Since 1986 the U.S. ATF has assigned agents to NCAVC — currently one behavioral profiler + one GP profiler. ATF is the <strong>only U.S. federal agency</strong> with a GP profiler. Two-year training, ICIAF-certified.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="assumptions" class="section-card">
+      <div class="lang-zh-only">
+        <h2>8 · GP 六個基本假設（不滿足就會出錯）</h2>
+        <ol>
+          <li><strong>同一兇手</strong>：一系列案件必須能連結到同一人。</li>
+          <li><strong>≥ 3–4 件</strong>：太少無法穩定連結。Knabe-Nicol &amp; Alison (2011) 證明單一多地點案件仍可用 GP，但精度大降。</li>
+          <li><strong>案件散佈廣 + 有中央位置</strong>：太集中無法區分基地。</li>
+          <li><strong>穩定的單一基地</strong>：Beltway Sniper 案中 Muhammad &amp; Malvo 住車內、汽車旅館、熟人家 — 直接違反這條，GP 無能為力。</li>
+          <li><strong>案件間隔短</strong>（週、月）：時間太長警方無法初步連結。</li>
+          <li><strong>案件連續發生</strong>（非同日）：同日多案無法反映兇手「回基地→再出擊」的時間結構。</li>
+        </ol>
+
+        <div class="callout callout-warn">
+          <strong>📉 Beltway Sniper 為何 GP 失敗？</strong>違反假設 4（無穩定基地）+ 跨州（馬里蘭→維吉尼亞）。若不是媒體大量報導+其特殊 MO，可能會落入 Harries &amp; LeBeau 警告的「跨轄區、無人協調」最糟劇本。
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>8 · GP's Six Basic Assumptions</h2>
+        <ol>
+          <li><strong>One offender</strong>: cases linkable to a single person.</li>
+          <li><strong>≥ 3–4 cases</strong>: too few prevents stable linking. Knabe-Nicol &amp; Alison (2011) show GP can help single multi-location crimes, with reduced precision.</li>
+          <li><strong>Wide dispersal with center</strong>: too clustered defeats anchor estimation.</li>
+          <li><strong>Single stable base</strong>: Beltway Snipers slept in car/motels/acquaintances' homes — broke this and GP failed.</li>
+          <li><strong>Short intervals</strong> (weeks/months): too long blocks initial linking.</li>
+          <li><strong>Continuous series</strong> (not same day): same-day events don't reflect the "return to base → strike" rhythm.</li>
+        </ol>
+
+        <div class="callout callout-warn">
+          <strong>📉 Why GP failed for Beltway:</strong> violated #4 + cross-state (MD→VA). Without media saturation and a dramatic MO, it could have hit the Harries &amp; LeBeau "worst case" — uncoordinated multi-jurisdiction.
+        </div>
+      </div>
+    </section>
+
+    <section id="heuristics-vs-software" class="section-card">
+      <div class="lang-zh-only">
+        <h2>9 · 簡單捷思法可能勝過昂貴軟體？</h2>
+        <p>本章最大的「反直覺」發現：</p>
+
+        <div class="bias-diagram">
+          <strong>🎓 Snook 等 (2002, 2004) + Bennell 等 (2007) 實驗設計：</strong>
+          <div class="bias-flow">
+            <div class="bias-step"><strong>實驗組</strong><br>學生 / 警察<br>學 2 個 heuristic<br>(circle + distance decay)</div>
+            <div class="bias-arrow">vs</div>
+            <div class="bias-step"><strong>對照組</strong><br>無訓練</div>
+            <div class="bias-arrow">vs</div>
+            <div class="bias-step"><strong>電腦</strong><br>Dragnet / CrimeStat</div>
+          </div>
+        </div>
+
+        <ul>
+          <li>實驗組「平均」表現等同或優於昂貴電腦軟體。</li>
+          <li>Bennell 等：91 位英國警察，<strong>連訓練都不用</strong>，多數人預測與 CrimeStat 相當。簡單訓練後則明顯優於 CrimeStat。</li>
+          <li>加入更多案件數量、更細地形也未明顯提升準確度。</li>
+        </ul>
+
+        <p>Block &amp; Bernasco (2009)：<strong>「電腦軟體常常輸給簡單方法 — 因為它們只用了 distance decay，沒用環境犯罪學的豐富理論。」</strong></p>
+
+        <div class="callout callout-tip">
+          <strong>💰 對警局實務的啟示：</strong>不需要花大錢買 GP 軟體；訓練偵查員兩個 heuristic（circle + decay）就能達到接近水準。
+        </div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>9 · Can Simple Heuristics Beat Expensive Software?</h2>
+        <p>The chapter's most counterintuitive finding:</p>
+
+        <div class="bias-diagram">
+          <strong>🎓 Snook et al. (2002, 2004) + Bennell et al. (2007):</strong>
+          <div class="bias-flow">
+            <div class="bias-step"><strong>Experimental</strong><br>students / cops<br>2 heuristics learned<br>(circle + decay)</div>
+            <div class="bias-arrow">vs</div>
+            <div class="bias-step"><strong>Control</strong><br>no training</div>
+            <div class="bias-arrow">vs</div>
+            <div class="bias-step"><strong>Computer</strong><br>Dragnet / CrimeStat</div>
+          </div>
+        </div>
+
+        <ul>
+          <li>Experimental group matched or beat expensive software on average.</li>
+          <li>Bennell et al.: 91 UK officers — <strong>even untrained</strong>, most matched CrimeStat. Brief training beat it clearly.</li>
+          <li>Adding more cases or topographic detail didn't significantly improve accuracy.</li>
+        </ul>
+
+        <p>Block &amp; Bernasco (2009): <strong>"Computer tools often lose to simpler techniques — they exploited only distance decay, barely using the richer environmental theory."</strong></p>
+
+        <div class="callout callout-tip">
+          <strong>💰 Implication for police:</strong> No need to splurge on GP software — training detectives in two heuristics (circle + decay) yields comparable accuracy.
+        </div>
+      </div>
+    </section>
+
+    <section id="bayes" class="section-card">
+      <div class="lang-zh-only">
+        <h2>10 · Bayesian 方法的反擊</h2>
+        <p>面對「簡單捷思法贏過電腦」的挑戰，電腦派加入 <strong>Empirical Bayes</strong> 方法。CrimeStat 3.1 新版產生 3 個風險面：</p>
+        <ol>
+          <li>傳統 journey-to-crime / distance decay</li>
+          <li>過往兇手住處分布（與案發地無關）</li>
+          <li>「Origin–destination zone matrix」 — 把移動成本、特定吸引點、地理障礙都納入</li>
+        </ol>
+        <p>Block &amp; Bernasco (2009) 在 62 名竊賊資料中證實：Bayesian &gt; 傳統 distance decay，<strong>對 marauder 效果最好</strong>。</p>
+
+        <p>Leitner &amp; Kent (2009) 用 Baltimore County 850 件「多類型犯罪系列」（如 2 竊盜 + 3 車竊 + 1 縱火）發現：<strong>整合不同犯罪類型反而比同類型更準</strong> — 因為多類型系列中 marauder 比例更高。挑戰「同類型才能做 GP」的傳統做法。</p>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>10 · The Bayesian Counterattack</h2>
+        <p>Facing the heuristics challenge, software teams added <strong>Empirical Bayes</strong>. CrimeStat 3.1 produces 3 risk surfaces:</p>
+        <ol>
+          <li>Classic journey-to-crime / distance decay</li>
+          <li>Past-offender residence distribution (independent of where they offended)</li>
+          <li>"Origin–destination zone matrix" — incorporates travel cost, attractions, barriers</li>
+        </ol>
+        <p>Block &amp; Bernasco (2009) on 62 burglars: Bayesian &gt; traditional decay, <strong>best for marauders</strong>.</p>
+
+        <p>Leitner &amp; Kent (2009) used Baltimore County's 850 multi-crime-type series (e.g., 2 burglaries + 3 auto thefts + 1 arson) — <strong>integrating types improved accuracy</strong>: higher marauder proportions in multi-type series. Challenges the "same-type only" tradition.</p>
+      </div>
+    </section>
+
+    <section id="glossary" class="section-card">
+      <div class="lang-zh-only">
+        <h2>11 · 關鍵詞彙</h2>
+        <table class="compare-table">
+          <thead><tr><th>詞彙</th><th>一句話定義</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Action / Awareness space</strong></td><td>兇手日常活動／心智地圖所及的地理範圍。</td></tr>
+            <tr><td><strong>Bayesian method</strong></td><td>整合過往兇手住處、移動成本、障礙的進階 GP 演算法。</td></tr>
+            <tr><td><strong>Buffer zone</strong></td><td>兇手住處附近犯罪機率反而較低的小區域。</td></tr>
+            <tr><td><strong>Centrality theory</strong></td><td>「家為圓心，犯案圍繞」的假設。</td></tr>
+            <tr><td><strong>Cognitive scripts</strong></td><td>對特定情境的自動化心智「動作劇本」。</td></tr>
+            <tr><td><strong>Commuter</strong></td><td>從家通勤到別區犯案的連續犯。</td></tr>
+            <tr><td><strong>CrimeStat / Dragnet / Rigel</strong></td><td>三大 GP 軟體。</td></tr>
+            <tr><td><strong>Distance decay</strong></td><td>離家越遠，犯案機率越低的衰減函數。</td></tr>
+            <tr><td><strong>Environmental criminology</strong></td><td>強調「機會分佈」的犯罪學分支。</td></tr>
+            <tr><td><strong>Error distance / Top profile area</strong></td><td>GP 軟體的兩個準確度指標。</td></tr>
+            <tr><td><strong>Hunter / Poacher / Troller / Trapper</strong></td><td>Rossmo 四種狩獵模式。</td></tr>
+            <tr><td><strong>Hot spot / Hot place</strong></td><td>高犯罪密度的區域 / 場所。</td></tr>
+            <tr><td><strong>Marauder</strong></td><td>從家出發犯案後返家的連續犯。</td></tr>
+            <tr><td><strong>Mental map</strong></td><td>個人對地理環境的內在表徵。</td></tr>
+            <tr><td><strong>Predictive policing</strong></td><td>用大數據預期、預防犯罪的警政策略。</td></tr>
+            <tr><td><strong>Raptor / Stalker / Ambusher</strong></td><td>Rossmo 三種攻擊方式。</td></tr>
+            <tr><td><strong>Rational choice theory</strong></td><td>犯罪者為理性成本效益分析者。</td></tr>
+            <tr><td><strong>Routine activity theory</strong></td><td>動機犯罪者 + 合適目標 + 缺乏監護者。</td></tr>
+            <tr><td><strong>Target backcloth</strong></td><td>從兇手角度的「合適目標時空分佈」。</td></tr>
+            <tr><td><strong>Windshield wiper effect</strong></td><td>家為扇柄、犯案約 60° 扇出的模式。</td></tr>
+            <tr><td><strong>Zone of transition</strong></td><td>Burgess 的「犯罪溫床」過渡帶。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="lang-en-only">
+        <h2>11 · Key Concepts</h2>
+        <table class="compare-table">
+          <thead><tr><th>Term</th><th>One-line definition</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Action / Awareness space</strong></td><td>The geographic range of routine activity / mental map.</td></tr>
+            <tr><td><strong>Bayesian method</strong></td><td>Advanced GP integrating past-offender residences, travel cost, barriers.</td></tr>
+            <tr><td><strong>Buffer zone</strong></td><td>Small low-offending zone around the offender's home.</td></tr>
+            <tr><td><strong>Centrality theory</strong></td><td>"Home is the center; crimes circle it" assumption.</td></tr>
+            <tr><td><strong>Cognitive scripts</strong></td><td>Automated mental "action plans" for situations.</td></tr>
+            <tr><td><strong>Commuter</strong></td><td>Serial offender who travels from home to another area.</td></tr>
+            <tr><td><strong>CrimeStat / Dragnet / Rigel</strong></td><td>The three major GP programs.</td></tr>
+            <tr><td><strong>Distance decay</strong></td><td>Decay function: farther from home → less offending.</td></tr>
+            <tr><td><strong>Environmental criminology</strong></td><td>Criminology branch emphasizing opportunity distribution.</td></tr>
+            <tr><td><strong>Error distance / Top profile area</strong></td><td>GP accuracy metrics.</td></tr>
+            <tr><td><strong>Hunter / Poacher / Troller / Trapper</strong></td><td>Rossmo's four hunting patterns.</td></tr>
+            <tr><td><strong>Hot spot / Hot place</strong></td><td>High-crime area / specific location.</td></tr>
+            <tr><td><strong>Marauder</strong></td><td>Serial offender who leaves home, offends, returns.</td></tr>
+            <tr><td><strong>Mental map</strong></td><td>Personal internal representation of geography.</td></tr>
+            <tr><td><strong>Predictive policing</strong></td><td>Big-data anticipation/prevention strategy.</td></tr>
+            <tr><td><strong>Raptor / Stalker / Ambusher</strong></td><td>Rossmo's three attack methods.</td></tr>
+            <tr><td><strong>Rational choice theory</strong></td><td>Offender as rational cost-benefit analyst.</td></tr>
+            <tr><td><strong>Routine activity theory</strong></td><td>Motivated offender + suitable target + no guardian.</td></tr>
+            <tr><td><strong>Target backcloth</strong></td><td>Spatial/temporal distribution of suitable targets from offender's view.</td></tr>
+            <tr><td><strong>Windshield wiper effect</strong></td><td>Crimes fan out ~60° from home, not 360°.</td></tr>
+            <tr><td><strong>Zone of transition</strong></td><td>Burgess's "hot bed" transition zone.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="summary" class="section-card">
+      <div class="lang-zh-only">
+        <h2>12 · 本章總結</h2>
+        <ol>
+          <li>Mapping 看群體，Profiling 看個別連續犯。</li>
+          <li>芝加哥學派的同心圓 + Shaw &amp; McKay 的少年犯資料奠定空間犯罪學。</li>
+          <li>Routine Activity Theory 與 Rational Choice Theory 是 GP 的理論雙柱。</li>
+          <li>五個核心概念（distance decay、buffer zone、mental maps、awareness space、centrality）是讀 GP 報告的入場券。</li>
+          <li>Canter &amp; Larkin 的 Marauder/Commuter 二分 + Rossmo 的 Hunter/Poacher/Troller/Trapper 四分 + Raptor/Stalker/Ambusher 三攻擊法，提供更細的空間人格畫像。</li>
+          <li>Rigel / CrimeStat / Dragnet 三大軟體基於 distance decay；但 Snook、Bennell 等的實驗顯示「兩個簡單 heuristic」就能達到甚至超過軟體準確度。</li>
+          <li>Bayesian 改進方法（CrimeStat 3.1）整合移動成本、地理障礙、過往住處 → 對 marauder 最有效。</li>
+          <li>六個基本假設未滿足時（Beltway Sniper 案）GP 會失效。</li>
+        </ol>
+        <div class="callout callout-tip"><strong>🎯 一句話帶走：</strong>「兇手會用兩條腿和方向盤洩漏他的祕密 — 只要你看懂他的 mental map。」</div>
+      </div>
+
+      <div class="lang-en-only">
+        <h2>12 · Chapter Summary</h2>
+        <ol>
+          <li>Mapping looks at populations; profiling at individual serial offenders.</li>
+          <li>The Chicago School's concentric circles + Shaw &amp; McKay's juvenile data founded spatial criminology.</li>
+          <li>Routine Activity + Rational Choice are GP's twin theoretical pillars.</li>
+          <li>Five core concepts (distance decay, buffer zone, mental maps, awareness space, centrality) are entry tickets to GP reports.</li>
+          <li>Canter &amp; Larkin's Marauder/Commuter + Rossmo's Hunter/Poacher/Troller/Trapper + Raptor/Stalker/Ambusher add finer spatial-personality detail.</li>
+          <li>Rigel / CrimeStat / Dragnet rely on distance decay — but Snook, Bennell et al. show two simple heuristics can match or beat them.</li>
+          <li>Bayesian improvements (CrimeStat 3.1) integrate travel cost, barriers, past residences — best for marauders.</li>
+          <li>When the six assumptions fail (Beltway Sniper), GP collapses.</li>
+        </ol>
+        <div class="callout callout-tip"><strong>🎯 One-liner takeaway:</strong> "An offender betrays himself with his legs and his steering wheel — if you can read his mental map."</div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section-card quiz-container" style="padding:1.25rem"></section>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="copyright">© 2026 葉欲禾 (Gary Yu-Ho YEH) — All Rights Reserved 版權所有</p>
+    <p><span class="lang-zh-only">本互動教材改編自 Bartol &amp; Bartol (2013). <em>Criminal &amp; Behavioral Profiling</em>. SAGE。</span><span class="lang-en-only">Adapted from Bartol &amp; Bartol (2013). <em>Criminal &amp; Behavioral Profiling</em>. SAGE.</span></p>
+    <p><a href="../index.html"><span class="lang-zh-only">← 回到目錄</span><span class="lang-en-only">← Back to TOC</span></a></p>
+  </div>
+</footer>
+
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/quiz.js"></script>
+<script src="../assets/data/chapter4-quiz.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const c = document.querySelector("#quiz");
+    if (c && window.CBP?.QuizBank?.chapter4) {
+      new window.CBP.Quiz({ container: c, bank: window.CBP.QuizBank.chapter4.questions, count: 10,
+        onSubmit: p => console.log("[Ch4 Quiz]", p) });
+    }
+  });
+</script>
+</body>
+</html>
